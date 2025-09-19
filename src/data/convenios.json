@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "nombre": "Banco Regional",
+    "descripcion": "Líneas de crédito preferenciales para socios del Centro Comercial",
+    "descuento": "Hasta 15% de descuento en tasas de interés",
+    "categoria": "Financiero",
+    "logo": "/globe.svg",
+    "web": "https://www.bancoregional.com.uy",
+    "telefono": "(598) 2400 1234",
+    "email": "convenios@bancoregional.com.uy",
+    "beneficios": [
+      "Líneas de crédito preferenciales",
+      "Asesoramiento financiero gratuito",
+      "Descuentos en seguros empresariales"
+    ],
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Seguros del Sur",
+    "descripcion": "Cobertura integral para empresas socias",
+    "descuento": "20% de descuento en pólizas empresariales",
+    "categoria": "Seguros",
+    "logo": "/globe.svg",
+    "web": "https://www.segurosdelsur.com.uy",
+    "telefono": "(598) 2400 5678",
+    "email": "empresas@segurosdelsur.com.uy",
+    "beneficios": [
+      "Descuentos en seguros empresariales",
+      "Cobertura especializada",
+      "Asesoramiento en gestión de riesgos"
+    ],
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Tech Solutions",
+    "descripcion": "Servicios de tecnología e informática para empresas",
+    "descuento": "25% de descuento en servicios de IT",
+    "categoria": "Tecnología",
+    "logo": "/globe.svg",
+    "web": "https://www.techsolutions.com.uy",
+    "telefono": "(598) 2400 9012",
+    "email": "ventas@techsolutions.com.uy",
+    "beneficios": [
+      "Descuentos en servicios de IT",
+      "Consultoría tecnológica gratuita",
+      "Soporte técnico prioritario"
+    ],
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Consultoría Empresarial Plus",
+    "descripcion": "Servicios de consultoría y asesoramiento empresarial",
+    "descuento": "30% de descuento en consultorías",
+    "categoria": "Consultoría",
+    "logo": "/globe.svg",
+    "web": "https://www.consultoriaplus.com.uy",
+    "telefono": "(598) 2400 3456",
+    "email": "info@consultoriaplus.com.uy",
+    "beneficios": [
+      "Descuentos en servicios de consultoría",
+      "Asesoramiento legal gratuito",
+      "Capacitación empresarial"
+    ],
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Transportes Unidos",
+    "descripcion": "Servicios de logística y transporte para empresas",
+    "descuento": "18% de descuento en servicios de transporte",
+    "categoria": "Logística",
+    "logo": "/globe.svg",
+    "web": "https://www.transportesunidos.com.uy",
+    "telefono": "(598) 2400 7890",
+    "email": "comercial@transportesunidos.com.uy",
+    "beneficios": [
+      "Descuentos en servicios de transporte",
+      "Logística especializada",
+      "Seguimiento en tiempo real"
+    ],
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Marketing Digital Pro",
+    "descripcion": "Servicios de marketing digital y publicidad online",
+    "descuento": "22% de descuento en campañas publicitarias",
+    "categoria": "Marketing",
+    "logo": "/globe.svg",
+    "web": "https://www.marketingpro.com.uy",
+    "telefono": "(598) 2400 2468",
+    "email": "contacto@marketingpro.com.uy",
+    "beneficios": [
+      "Descuentos en campañas publicitarias",
+      "Consultoría en marketing digital",
+      "Análisis de mercado gratuito"
+    ],
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Contadores Asociados",
+    "descripcion": "Servicios contables y fiscales para empresas",
+    "descuento": "20% de descuento en servicios contables",
+    "categoria": "Contabilidad",
+    "logo": "/globe.svg",
+    "web": "https://www.contadoresasociados.com.uy",
+    "telefono": "(598) 2400 1357",
+    "email": "info@contadoresasociados.com.uy",
+    "beneficios": [
+      "Descuentos en servicios contables",
+      "Asesoramiento fiscal gratuito",
+      "Declaraciones juradas sin costo adicional"
+    ],
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Inmobiliaria Las Piedras",
+    "descripcion": "Servicios inmobiliarios y asesoramiento en propiedades",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "categoria": "Inmobiliaria",
+    "logo": "/globe.svg",
+    "web": "https://www.inmobiliarialaspiedras.com.uy",
+    "telefono": "(598) 2400 9753",
+    "email": "ventas@inmobiliarialaspiedras.com.uy",
+    "beneficios": [
+      "Descuentos en comisiones",
+      "Asesoramiento inmobiliario gratuito",
+      "Valuaciones sin costo"
+    ],
+    "activo": true
+  }
+]

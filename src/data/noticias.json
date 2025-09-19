@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "titulo": "Nuevo programa de capacitación empresarial",
+    "descripcion": "Lanzamos un programa integral de capacitación para pequeñas y medianas empresas del sector comercial e industrial. Incluye módulos de gestión, marketing digital y desarrollo de productos.",
+    "imagen": "/assets/images/noticia-1.jpg",
+    "fecha": "2024-01-15",
+    "categoria": "Capacitación",
+    "tipo": "grande",
+    "publicado": true,
+    "autor": "Equipo CCIALP"
+  },
+  {
+    "id": 2,
+    "titulo": "Convenio estratégico con ANDE",
+    "descripcion": "Firmamos un convenio estratégico con la Agencia Nacional de Desarrollo Empresarial para fortalecer el ecosistema empresarial de Las Piedras.",
+    "fecha": "2024-01-12",
+    "categoria": "Convenios",
+    "tipo": "mediana",
+    "publicado": true,
+    "autor": "Dirección CCIALP"
+  },
+  {
+    "id": 3,
+    "titulo": "Crecimiento del 15% en el sector comercial",
+    "descripcion": "El sector comercial en Las Piedras ha crecido un 15% en el último trimestre, según datos oficiales del Ministerio de Economía.",
+    "fecha": "2024-01-10",
+    "categoria": "Estadísticas",
+    "tipo": "pequena",
+    "publicado": true,
+    "autor": "Departamento de Estadísticas"
+  },
+  {
+    "id": 4,
+    "titulo": "Workshop de marketing digital gratuito",
+    "descripcion": "Próximo workshop gratuito sobre estrategias de marketing digital para empresas locales. Cupos limitados. Inscripciones abiertas.",
+    "imagen": "/assets/images/noticia-4.jpg",
+    "fecha": "2024-01-08",
+    "categoria": "Eventos",
+    "tipo": "mediana",
+    "publicado": true,
+    "autor": "Área de Eventos"
+  },
+  {
+    "id": 5,
+    "titulo": "Actualización de normativas comerciales",
+    "descripcion": "Nuevas normativas comerciales que afectan a las empresas del sector. Revisión de requisitos y documentación necesaria.",
+    "fecha": "2024-01-05",
+    "categoria": "Normativas",
+    "tipo": "pequena",
+    "publicado": true,
+    "autor": "Asesoría Legal"
+  },
+  {
+    "id": 6,
+    "titulo": "Éxito rotundo en la feria comercial regional",
+    "descripcion": "La participación en la feria comercial regional fue un éxito rotundo, con más de 200 empresas participantes y 5000 visitantes. Próxima edición en marzo.",
+    "imagen": "/assets/images/noticia-6.jpg",
+    "fecha": "2024-01-03",
+    "categoria": "Eventos",
+    "tipo": "grande",
+    "publicado": true,
+    "autor": "Comisión de Eventos"
+  },
+  {
+    "id": 7,
+    "titulo": "15 empresas obtuvieron certificación ISO 9001",
+    "descripcion": "Ayudamos a 15 empresas a obtener la certificación ISO 9001 este mes. Proceso de acompañamiento y asesoramiento especializado.",
+    "fecha": "2024-01-01",
+    "categoria": "Certificaciones",
+    "tipo": "pequena",
+    "publicado": true,
+    "autor": "Área de Certificaciones"
+  },
+  {
+    "id": 8,
+    "titulo": "Ampliación de horarios de atención",
+    "descripcion": "Ampliamos nuestro horario de atención para mejor servicio a nuestros socios. Nuevos horarios: Lunes a Viernes 8:00-18:00, Sábados 9:00-13:00.",
+    "fecha": "2023-12-28",
+    "categoria": "Servicios",
+    "tipo": "mediana",
+    "publicado": true,
+    "autor": "Administración"
+  },
+  {
+    "id": 9,
+    "titulo": "Nuevo programa de financiamiento para emprendedores",
+    "descripcion": "Lanzamos un programa de financiamiento especial para emprendedores del sector agrario. Líneas de crédito con tasas preferenciales.",
+    "imagen": "/assets/images/noticia-9.jpg",
+    "fecha": "2023-12-25",
+    "categoria": "Financiamiento",
+    "tipo": "grande",
+    "publicado": true,
+    "autor": "Área de Financiamiento"
+  },
+  {
+    "id": 10,
+    "titulo": "Reunión mensual de socios",
+    "descripcion": "Próxima reunión mensual de socios el 30 de enero. Temas: balance anual, nuevas propuestas y elección de comisiones.",
+    "fecha": "2023-12-22",
+    "categoria": "Reuniones",
+    "tipo": "pequena",
+    "publicado": true,
+    "autor": "Secretaría"
+  },
+  {
+    "id": 11,
+    "titulo": "Curso de gestión de inventarios",
+    "descripcion": "Nuevo curso especializado en gestión de inventarios para empresas comerciales. Metodología práctica y casos reales.",
+    "imagen": "/assets/images/noticia-11.jpg",
+    "fecha": "2023-12-20",
+    "categoria": "Capacitación",
+    "tipo": "mediana",
+    "publicado": true,
+    "autor": "Área de Capacitación"
+  },
+  {
+    "id": 12,
+    "titulo": "Actualización del directorio de empresas",
+    "descripcion": "Publicamos la nueva versión del directorio de empresas asociadas. Incluye 150+ empresas del sector comercial, industrial y agrario.",
+    "fecha": "2023-12-18",
+    "categoria": "Directorio",
+    "tipo": "pequena",
+    "publicado": true,
+    "autor": "Departamento de Comunicaciones"
+  }
+]
