@@ -7,6 +7,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Asegurar que el scroll suave funcione en todos los navegadores */
+* {
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -26,4 +35,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Scroll suave para navegación */
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  scroll-behavior: smooth !important;
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer 
+      id="contacto"
       className="w-full py-8 px-4 md:px-8 lg:px-16 bg-primary-dark"
     >
       <div className="max-w-6xl mx-auto">
@@ -18,30 +19,58 @@ export default function Footer() {
             </div>
             
             
-            <div className="space-y-2">
-              <p 
-                className="text-sm text-white font-inter font-normal"
-              >
-                📍 Lavalleja 664, Las Piedras, Canelones
-              </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/assets/icons/location-blanco.svg"
+                  alt="Ubicación"
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <p 
+                  className="text-sm text-white font-inter font-normal"
+                >
+                  Lavalleja 664, Las Piedras, Canelones
+                </p>
+              </div>
               
-              <p 
-                className="text-sm text-white font-inter font-normal"
-              >
-                📞 (598) 2364 1234
-              </p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/assets/icons/phone-blanco.svg"
+                  alt="Teléfono"
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <p 
+                  className="text-sm text-white font-inter font-normal"
+                >
+                  (598) 2364 1234
+                </p>
+              </div>
               
-              <p 
-                className="text-sm text-white font-inter font-normal"
-              >
-                ✉️ info@ccialp.org.uy
-              </p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/assets/icons/mail-blanco.svg"
+                  alt="Email"
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <p 
+                  className="text-sm text-white font-inter font-normal"
+                >
+                  info@ccialp.org.uy
+                </p>
+              </div>
               
-              <p 
-                className="text-sm text-white font-inter font-normal"
-              >
-                🕒 Lun - Vie: 10:00 - 17:00
-              </p>
+              <div className="flex items-center gap-3">
+                <img 
+                  src="/assets/icons/clock-blanco.svg"
+                  alt="Horario"
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <p 
+                  className="text-sm text-white font-inter font-normal"
+                >
+                  Lun - Vie: 10:00 - 17:00
+                </p>
+              </div>
             </div>
           </div>
           
@@ -52,7 +81,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               {/* Facebook */}
               <Link 
-                href="https://facebook.com/ccialp"
+                href="https://www.facebook.com/ccomlp?locale=es_LA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -66,7 +95,7 @@ export default function Footer() {
               
               {/* Instagram */}
               <Link 
-                href="https://instagram.com/ccialp"
+                href="https://www.instagram.com/ccomercial.lp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -80,7 +109,7 @@ export default function Footer() {
               
               {/* LinkedIn */}
               <Link 
-                href="https://linkedin.com/company/ccialp"
+                href="https://www.linkedin.com/in/centro-comercial-industrial-y-agrario-de-las-piedras-b9941776/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -94,7 +123,7 @@ export default function Footer() {
               
               {/* Twitter/X */}
               <Link 
-                href="https://twitter.com/ccialp"
+                href="https://x.com/CCIALasPiedras"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -108,7 +137,7 @@ export default function Footer() {
               
               {/* YouTube */}
               <Link 
-                href="https://youtube.com/@ccialp"
+                href="https://www.youtube.com/@centrocomercial5753"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity duration-300"
@@ -128,7 +157,7 @@ export default function Footer() {
           <p 
             className="text-center text-xs text-white font-inter font-normal"
           >
-            © 2024 Centro Comercial, Industrial y Agrario de Las Piedras. Todos los derechos reservados.
+            © 2025 Centro Comercial, Industrial y Agrario de Las Piedras. Todos los derechos reservados.
           </p>
         </div>
       </div>

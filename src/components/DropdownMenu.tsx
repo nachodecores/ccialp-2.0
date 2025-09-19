@@ -7,8 +7,8 @@ export default function DropdownMenu() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const menuItems = [
-    { name: 'NOSOTROS', href: '#nosotros' },
-    { name: 'SERVICIOS', href: '#servicios' },
+    { name: 'NOSOTROS', href: '/nosotros' },
+    { name: 'SERVICIOS', href: '#services' },
     { name: 'CONVENIOS', href: '#convenios' },
     { name: 'CONTACTO', href: '#contacto' },
   ];
@@ -77,7 +77,28 @@ export default function DropdownMenu() {
               href={item.href}
               className="block px-3 py-2 text-lg md:text-2xl lg:text-3xl hover:bg-green-600 hover:text-white transition-colors duration-150 rounded-md mx-1 mb-1"
               style={{ color: '#2C2C2C' }}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false);
+                
+                // Si es un enlace a una página (empieza con /), navegar normalmente
+                if (item.href.startsWith('/')) {
+                  // No hacer preventDefault, dejar que navegue normalmente
+                  return;
+                }
+                
+                // Si es un enlace a una sección (empieza con #), hacer scroll suave
+                e.preventDefault();
+                setTimeout(() => {
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    element.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest'
+                    });
+                  }
+                }, 150);
+              }}
             >
               {item.name}
             </a>

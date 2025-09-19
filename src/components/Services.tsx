@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <section className="w-full py-8" style={{ backgroundColor: '#ffffff' }}>
+    <section id="services" className="w-full py-8" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-4xl mx-auto px-12 md:px-20 lg:px-32">
         {/* Lista simple de servicios con alternancia */}
         <div className="space-y-6 mb-8">
