@@ -30,7 +30,7 @@ export default function Hero() {
        
         
         <div 
-          className="text-[4rem] md:text-[20rem] flex-col lg:text-[30rem] mb-8 min-h-[8rem] flex items-center justify-center"
+          className="text-4xl md:text-6xl lg:text-8xl mb-8 min-h-[8rem] flex items-center justify-center flex-col"
           style={{ 
             fontFamily: 'Abel, sans-serif',
             fontWeight: '400',

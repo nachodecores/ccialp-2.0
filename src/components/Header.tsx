@@ -27,21 +27,19 @@ export default function Header() {
             alt="Línea curva superior"
             width={120}
             height={2}
-            className="h-auto"
-            style={{ width: '25vw', maxWidth: '12.5rem' }}
+            className="h-auto w-24 md:w-32 lg:w-40"
           />
         </div>
         
         {/* Texto descriptivo */}
         <p 
-          className="whitespace-nowrap"
+          className="whitespace-nowrap text-xs md:text-sm lg:text-base"
           style={{ 
             color: 'white',
             fontFamily: 'Kanit, sans-serif',
             fontWeight: '300',
             margin: '0',
             padding: '0',
-            fontSize: '2.5vw',
             lineHeight: '1'
           }}
         >
@@ -50,14 +48,13 @@ export default function Header() {
         
         {/* Texto principal */}
         <h1 
-          className="whitespace-nowrap"
+          className="whitespace-nowrap text-sm md:text-base lg:text-lg"
           style={{ 
             color: 'white',
             fontFamily: 'Kanit, sans-serif',
             fontWeight: '600',
             margin: '0',
             padding: '0',
-            fontSize: '3.5vw',
             lineHeight: '1',
             letterSpacing: '0.5em',
           }}
@@ -72,8 +69,7 @@ export default function Header() {
             alt="Línea curva inferior"
             width={120}
             height={2}
-            className="h-auto"
-            style={{ width: '25vw', maxWidth: '12.5rem' }}
+            className="h-auto w-24 md:w-32 lg:w-40"
           />
         </div>
       </div>

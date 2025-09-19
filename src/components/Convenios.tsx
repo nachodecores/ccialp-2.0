@@ -6,8 +6,6 @@ export default function Convenios() {
   const convenios = conveniosData.filter(convenio => convenio.activo);
   return (
     <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#f8f9fa' }}>
-      {/* Fondo estático claro */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-green/3 via-white to-primary-dark/2"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Título y descripción */}
@@ -69,25 +67,17 @@ export default function Convenios() {
 
         {/* Botón para ver todos los convenios */}
         <div className="text-center">
-          <div className="relative inline-block group">
-            {/* Efecto de brillo de fondo */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary-green via-primary-green/80 to-primary-green rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition duration-300"></div>
-            
-            <Link 
-              href="/convenios"
-              className="relative inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-primary-green to-primary-green/90 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border border-primary-green/20"
-              style={{ 
-                fontFamily: 'Kanit, sans-serif',
-                fontWeight: '600',
-                backgroundColor: '#21A85B',
-                background: 'linear-gradient(135deg, #21A85B 0%, #1A8A4A 100%)'
-              }}
-            >
-              <span className="relative z-10">CONOCER TODOS NUESTROS CONVENIOS</span>
-              
-              
-            </Link>
-          </div>
+          <Link 
+            href="/convenios"
+            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+            style={{ 
+              fontFamily: 'Kanit, sans-serif',
+              fontWeight: '600',
+              backgroundColor: '#21A85B'
+            }}
+          >
+            CONOCER TODOS NUESTROS CONVENIOS
+          </Link>
         </div>
       </div>
     </section>

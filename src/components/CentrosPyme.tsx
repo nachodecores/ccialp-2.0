@@ -2,8 +2,11 @@ import Link from "next/link";
 
 export default function CentrosPyme() {
   return (
-    <section 
-      className="w-full flex items-center justify-center" 
+    <Link 
+      href="https://www.ande.org.uy/centros-pymes.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full flex items-center justify-center hover:opacity-80 transition-opacity duration-300"
       style={{ 
         backgroundColor: '#e83843',
         paddingTop: '2rem',
@@ -27,23 +30,16 @@ export default function CentrosPyme() {
         TENEMOS OFICINA DEL 
       </p>
       
-      {/* Logo como enlace */}
-      <Link 
-        href="https://www.ande.org.uy/centros-pymes.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center hover:opacity-80 transition-opacity duration-300"
-      >
-        <img 
-          src="/assets/logos/logo-cpy-blanco.jpg"
-          alt="Centros Pyme - ANDE"
-          className="w-auto"
-          style={{ 
-            maxHeight: '3.5rem',
-            backgroundColor: 'transparent'
-          }}
-        />
-      </Link>
-    </section>
+      {/* Logo */}
+      <img 
+        src="/assets/logos/logo-cpy-blanco.jpg"
+        alt="Centros Pyme - ANDE"
+        className="w-auto"
+        style={{ 
+          maxHeight: '3.5rem',
+          backgroundColor: 'transparent'
+        }}
+      />
+    </Link>
   );
 }

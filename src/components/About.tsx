@@ -3,8 +3,6 @@ import Link from "next/link";
 export default function About() {
   return (
     <section className="w-full py-24 px-6 md:px-12 lg:px-24" style={{ backgroundColor: '#f8f9fa' }}>
-      {/* Fondo estático claro */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-green/5 via-white to-primary-dark/3"></div>
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Texto principal */}
