@@ -21,8 +21,8 @@ export default function Noticias() {
   
   // Cargar datos desde JSON
   const noticias: Noticia[] = noticiasData as Noticia[];
-  const noticiasIniciales = noticias.slice(0, 6);
-  const noticiasAdicionales = noticias.slice(6);
+  const noticiasIniciales = noticias.slice(0, 3);
+  const noticiasAdicionales = noticias.slice(3);
   
   const noticiasAMostrar = mostrarMas ? noticias : noticiasIniciales;
 

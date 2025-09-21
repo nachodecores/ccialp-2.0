@@ -14,7 +14,7 @@ export default function About() {
             color: '#0F3439'
           }}
         >
-          tenemos historia, tenemos futuro. <Link href="/nosotros" className="text-primary-green hover:underline">conocé más</Link> sobre nosotros
+          Tenemos historia, tenemos futuro. <br /> <Link href="/nosotros" className="text-primary-green hover:underline animate-pulse-subtle">Conocé más</Link> sobre nosotros
         </h2>
       
         

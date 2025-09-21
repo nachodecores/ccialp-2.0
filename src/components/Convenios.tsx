@@ -6,8 +6,7 @@ export default function Convenios() {
   const convenios = conveniosData.filter(convenio => convenio.activo);
   return (
     <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#f8f9fa' }}>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto">
         {/* Título y descripción */}
         <div className="text-center mb-8">
           <h2 
@@ -18,48 +17,42 @@ export default function Convenios() {
               color: '#0F3439'
             }}
           >
-            Ser socio del Centro tiene sus beneficios
+            Ser socio del Centro tiene beneficios
           </h2>
         
         </div>
 
         {/* Carrusel de logos con animación infinita */}
         <div className="mb-16 overflow-hidden">
-          <div className="flex animate-scroll space-x-8 pb-4">
+          <div className="flex animate-scroll space-x-12 pb-4">
             {/* Primera fila de logos */}
             {convenios.map((convenio) => (
               <div 
                 key={`first-${convenio.id}`} 
-                className="flex-shrink-0 w-32 h-20 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+                className="flex-shrink-0 flex items-center justify-center"
               >
-                <div className="text-center">
-                  <Image
-                    src={convenio.logo}
-                    alt={`Logo de ${convenio.nombre}`}
-                    width={64}
-                    height={32}
-                    className="w-16 h-8 object-contain"
-                  />
-                  <p className="text-xs text-gray-600 font-medium mt-2">{convenio.nombre}</p>
-                </div>
+                <Image
+                  src={convenio.logo}
+                  alt={`Logo de ${convenio.nombre}`}
+                  width={160}
+                  height={80}
+                  className="w-40 h-20 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
               </div>
             ))}
             {/* Segunda fila de logos para el loop infinito */}
             {convenios.map((convenio) => (
               <div 
                 key={`second-${convenio.id}`} 
-                className="flex-shrink-0 w-32 h-20 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+                className="flex-shrink-0 flex items-center justify-center"
               >
-                <div className="text-center">
-                  <Image
-                    src={convenio.logo}
-                    alt={`Logo de ${convenio.nombre}`}
-                    width={64}
-                    height={32}
-                    className="w-16 h-8 object-contain"
-                  />
-                  <p className="text-xs text-gray-600 font-medium mt-2">{convenio.nombre}</p>
-                </div>
+                <Image
+                  src={convenio.logo}
+                  alt={`Logo de ${convenio.nombre}`}
+                  width={160}
+                  height={80}
+                  className="w-40 h-20 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
               </div>
             ))}
           </div>
@@ -76,7 +69,7 @@ export default function Convenios() {
               backgroundColor: '#21A85B'
             }}
           >
-            CONOCER TODOS NUESTROS CONVENIOS
+            CONOCÉ TODOS NUESTROS CONVENIOS
           </Link>
         </div>
       </div>

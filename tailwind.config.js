@@ -107,7 +107,7 @@ module.exports = {
       
       // Animaciones personalizadas
       animation: {
-        'scroll': 'scroll 30s linear infinite',
+        'scroll': 'scroll 20s linear infinite',
         'bounce-subtle': 'bounce 2s infinite',
         'float': 'float 3s ease-in-out infinite',
       },

@@ -9,7 +9,7 @@ export default function DropdownMenu() {
   const menuItems = [
     { name: 'NOSOTROS', href: '/nosotros' },
     { name: 'SERVICIOS', href: '#services' },
-    { name: 'CONVENIOS', href: '#convenios' },
+    { name: 'CONVENIOS', href: '/convenios' },
     { name: 'CONTACTO', href: '#contacto' },
   ];
 

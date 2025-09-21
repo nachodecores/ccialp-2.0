@@ -4,9 +4,17 @@ export default function Footer() {
   return (
     <footer 
       id="contacto"
-      className="w-full py-8 px-4 md:px-8 lg:px-16 bg-primary-dark"
+      className="w-full py-18 px-4 md:px-8 lg:px-16 bg-primary-dark relative"
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Efecto de gradiente difuso en el borde superior */}
+      <div 
+        className="absolute top-0 left-0 w-full h-16 pointer-events-none"
+        style={{
+          background: 'linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(15,52,57,0.8) 50%, #0F3439 100%)',
+          backdropFilter: 'blur(2px)'
+        }}
+      />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Información de contacto */}
           <div className="flex-1 text-center md:text-left">

@@ -2,10 +2,17 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <section id="services" className="w-full py-8" style={{ backgroundColor: '#ffffff' }}>
-      <div className="max-w-4xl mx-auto px-12 md:px-20 lg:px-32">
+    <section id="services" className="w-full py-8 relative" style={{ backgroundColor: '#ffffff' }}>
+      {/* Imagen de fondo */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ 
+          backgroundImage: 'url(/assets/images/fondo-varios-1.jpg)'
+        }}
+      />
+      <div className="max-w-4xl mx-auto px-12 md:px-20 lg:px-32 relative z-10">
         {/* Lista simple de servicios con alternancia */}
-        <div className="space-y-6 mb-8">
+        <div className="bg-white/20 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-4 md:p-8 space-y-6 mb-8 mt-8">
           <div className="p-4 text-left">
             <h3 
               className="text-lg font-semibold mb-2"
@@ -144,8 +151,6 @@ export default function Services() {
             </p>
           </div>
         </div>
-
-
       </div>
     </section>
   );

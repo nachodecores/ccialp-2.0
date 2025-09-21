@@ -67,7 +67,7 @@ export default function TypewriterText() {
   return (
     <span className="inline-block">
       {currentText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse">_</span>
     </span>
   );
 }
