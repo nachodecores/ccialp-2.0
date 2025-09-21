@@ -150,24 +150,26 @@ export default function Convenios() {
                     >
                       {/* Frente de la card */}
                       <div 
-                        className="flip-card-front absolute inset-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col items-center justify-center text-center"
+                        className="flip-card-front absolute inset-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col items-center justify-center text-center relative"
                         style={{ backfaceVisibility: 'hidden' }}
                       >
-                        <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        {/* Categoría en esquina superior derecha */}
+                        <div className="absolute top-3 right-3 text-xs opacity-90 px-2 py-1 rounded-full bg-primary-green/20 text-primary-green font-medium">
+                          {convenio.categoria}
+                        </div>
+                        
+                        <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
                           <Image
                             src={convenio.logo}
                             alt={`Logo de ${convenio.nombre}`}
-                            width={32}
-                            height={32}
-                            className="w-8 h-8"
+                            width={48}
+                            height={48}
+                            className="w-12 h-12"
                           />
                         </div>
                         <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif' }}>
                           {convenio.nombre}
                         </h3>
-                        <div className="text-sm opacity-90 px-2 py-1 rounded-full bg-primary-green/20 text-primary-green font-medium">
-                          {convenio.categoria}
-                        </div>
                       </div>
 
                       {/* Reverso de la card */}
@@ -178,9 +180,6 @@ export default function Convenios() {
                           transform: 'rotateY(180deg)'
                         }}
                       >
-                        <div className="w-12 h-12 mx-auto mb-3 bg-white/20 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl">💰</span>
-                        </div>
                         <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: 'Kanit, sans-serif' }}>
                           {convenio.nombre}
                         </h3>

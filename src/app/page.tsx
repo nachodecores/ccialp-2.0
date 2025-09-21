@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Convenios from "@/components/Convenios";
 import CentrosPyme from "@/components/CentrosPyme";
 import Noticias from "@/components/Noticias";
+import Confederaciones from "@/components/Confederaciones";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <CentrosPyme />
       <Convenios />
       <Noticias />
+      <Confederaciones />
       <Footer />
       <WhatsAppButton />
     </div>

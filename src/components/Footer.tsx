@@ -4,28 +4,25 @@ export default function Footer() {
   return (
     <footer 
       id="contacto"
-      className="w-full py-18 px-4 md:px-8 lg:px-16 bg-primary-dark relative"
+      className="w-full py-24 px-4 md:px-8 lg:px-16 bg-primary-dark relative"
     >
       {/* Efecto de gradiente difuso en el borde superior */}
       <div 
-        className="absolute top-0 left-0 w-full h-16 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-24 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(15,52,57,0.8) 50%, #0F3439 100%)',
-          backdropFilter: 'blur(2px)'
+          background: 'linear-gradient(180deg, rgba(249,250,251,1) 0%, rgba(249,250,251,0.9) 20%, rgba(243,244,246,0.7) 40%, rgba(15,52,57,0.3) 80%, rgba(15,52,57,0.8) 95%, #0F3439 100%)',
+          backdropFilter: 'blur(4px)'
         }}
       />
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Información de contacto */}
-          <div className="flex-1 text-center md:text-left">
-            <div className="py-12 px-6">
-              <h3 
-                className="text-lg font-semibold mb-4 text-white font-kanit font-semibold"
-              >
-                "Algunos ven al empresario como el lobo al que hay que abatir, otros lo ven como la vaca que hay que ordeñar, pero muy pocos lo ven como el caballo que tira del carro"
-              </h3>
-            </div>
-            
+          <div className="flex-1 text-center md:text-left py-12 px-6">
+            <h3 
+              className="text-lg font-semibold mb-4 text-white font-kanit"
+            >
+              "Algunos ven al empresario como el lobo al que hay que abatir, otros lo ven como la vaca que hay que ordeñar, pero muy pocos lo ven como el caballo que tira del carro"
+            </h3>
             
             <div className="space-y-3">
               <div className="flex items-center gap-3">
@@ -83,10 +80,7 @@ export default function Footer() {
           </div>
           
           {/* Redes sociales */}
-          <div className="flex-shrink-0">
-           
-            
-            <div className="flex space-x-4">
+          <div className="flex-shrink-0 flex space-x-4">
               {/* Facebook */}
               <Link 
                 href="https://www.facebook.com/ccomlp?locale=es_LA"
@@ -156,7 +150,6 @@ export default function Footer() {
                   className="w-8 h-8"
                 />
               </Link>
-            </div>
           </div>
         </div>
         

@@ -41,8 +41,8 @@ module.exports = {
     'transition-all', 'transition-colors', 'transition-opacity', 'duration-200', 'duration-300',
     'hover:opacity-80', 'hover:shadow-lg', 'hover:shadow-xl', 'hover:scale-105',
     
-    // Clases de fuentes
-    'font-inter', 'font-kanit', 'font-abel',
+    // Clases de fuentes oficiales
+    'font-inter', 'font-kanit', 'font-abel', 'font-aboreto', 'font-adlam', 'font-afacad',
     
     // Clases de responsive
     'md:text-4xl', 'md:text-5xl', 'md:text-6xl', 'md:text-7xl', 'md:text-8xl', 'md:text-9xl',
@@ -87,14 +87,14 @@ module.exports = {
         }
       },
       
-      // Configuración de fuentes optimizada
+      // Configuración de fuentes oficiales del proyecto
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'kanit': ['Kanit', 'sans-serif'],
-        'abel': ['Abel', 'sans-serif'],
-        'aboreto': ['Aboreto', 'sans-serif'],
-        'adlam': ['ADLaM Display', 'sans-serif'],
-        'afacad': ['Afacad', 'sans-serif'],
+        'inter': ['var(--font-inter)', 'Inter', 'sans-serif'],
+        'kanit': ['var(--font-kanit)', 'Kanit', 'sans-serif'],
+        'abel': ['var(--font-abel)', 'Abel', 'sans-serif'],
+        'aboreto': ['var(--font-aboreto)', 'Aboreto', 'sans-serif'],
+        'adlam': ['var(--font-adlam)', 'ADLaM Display', 'sans-serif'],
+        'afacad': ['var(--font-afacad)', 'Afacad', 'sans-serif'],
       },
       
       // Pesos de fuente personalizados
