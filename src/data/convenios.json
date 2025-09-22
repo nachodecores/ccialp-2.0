@@ -2,137 +2,154 @@
   {
     "id": 1,
     "nombre": "CRAMI",
-    "descripcion": "Líneas de crédito preferenciales para socios del Centro Comercial",
     "descuento": "Hasta 15% de descuento en tasas de interés",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
     "logo": "/globe.svg",
-    "web": "https://www.bancoregional.com.uy",
-    "telefono": "(598) 2400 1234",
-    "email": "convenios@bancoregional.com.uy",
-    "beneficios": [
-      "Líneas de crédito preferenciales",
-      "Asesoramiento financiero gratuito",
-      "Descuentos en seguros empresariales"
-    ],
     "activo": true
   },
   {
     "id": 2,
-    "nombre": "Seguros del Sur",
-    "descripcion": "Cobertura integral para empresas socias",
+    "nombre": "Royal hotel",
     "descuento": "20% de descuento en pólizas empresariales",
-    "categoria": "Seguros",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Ocio y entretenimiento",
     "logo": "/globe.svg",
-    "web": "https://www.segurosdelsur.com.uy",
-    "telefono": "(598) 2400 5678",
-    "email": "empresas@segurosdelsur.com.uy",
-    "beneficios": [
-      "Descuentos en seguros empresariales",
-      "Cobertura especializada",
-      "Asesoramiento en gestión de riesgos"
-    ],
     "activo": true
   },
   {
     "id": 3,
-    "nombre": "Tech Solutions",
-    "descripcion": "Servicios de tecnología e informática para empresas",
+    "nombre": "La Española",
     "descuento": "25% de descuento en servicios de IT",
-    "categoria": "Tecnología",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Salud",
     "logo": "/globe.svg",
-    "web": "https://www.techsolutions.com.uy",
-    "telefono": "(598) 2400 9012",
-    "email": "ventas@techsolutions.com.uy",
-    "beneficios": [
-      "Descuentos en servicios de IT",
-      "Consultoría tecnológica gratuita",
-      "Soporte técnico prioritario"
-    ],
     "activo": true
   },
   {
     "id": 4,
-    "nombre": "Consultoría Empresarial Plus",
-    "descripcion": "Servicios de consultoría y asesoramiento empresarial",
+    "nombre": "Clinilab",
     "descuento": "30% de descuento en consultorías",
-    "categoria": "Consultoría",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Salud",
     "logo": "/globe.svg",
-    "web": "https://www.consultoriaplus.com.uy",
-    "telefono": "(598) 2400 3456",
-    "email": "info@consultoriaplus.com.uy",
-    "beneficios": [
-      "Descuentos en servicios de consultoría",
-      "Asesoramiento legal gratuito",
-      "Capacitación empresarial"
-    ],
     "activo": true
   },
   {
     "id": 5,
-    "nombre": "Transportes Unidos",
-    "descripcion": "Servicios de logística y transporte para empresas",
+    "nombre": "Cooperativa ACAC",
     "descuento": "18% de descuento en servicios de transporte",
-    "categoria": "Logística",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Financiamiento",
     "logo": "/globe.svg",
-    "web": "https://www.transportesunidos.com.uy",
-    "telefono": "(598) 2400 7890",
-    "email": "comercial@transportesunidos.com.uy",
-    "beneficios": [
-      "Descuentos en servicios de transporte",
-      "Logística especializada",
-      "Seguimiento en tiempo real"
-    ],
     "activo": true
   },
   {
     "id": 6,
-    "nombre": "Marketing Digital Pro",
-    "descripcion": "Servicios de marketing digital y publicidad online",
+    "nombre": "Asem",
     "descuento": "22% de descuento en campañas publicitarias",
-    "categoria": "Marketing",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Salud",
     "logo": "/globe.svg",
-    "web": "https://www.marketingpro.com.uy",
-    "telefono": "(598) 2400 2468",
-    "email": "contacto@marketingpro.com.uy",
-    "beneficios": [
-      "Descuentos en campañas publicitarias",
-      "Consultoría en marketing digital",
-      "Análisis de mercado gratuito"
-    ],
     "activo": true
   },
   {
     "id": 7,
-    "nombre": "Contadores Asociados",
-    "descripcion": "Servicios contables y fiscales para empresas",
+    "nombre": "Fundasol",
     "descuento": "20% de descuento en servicios contables",
-    "categoria": "Contabilidad",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Financiamiento",
     "logo": "/globe.svg",
-    "web": "https://www.contadoresasociados.com.uy",
-    "telefono": "(598) 2400 1357",
-    "email": "info@contadoresasociados.com.uy",
-    "beneficios": [
-      "Descuentos en servicios contables",
-      "Asesoramiento fiscal gratuito",
-      "Declaraciones juradas sin costo adicional"
-    ],
     "activo": true
   },
   {
     "id": 8,
-    "nombre": "Inmobiliaria Las Piedras",
-    "descripcion": "Servicios inmobiliarios y asesoramiento en propiedades",
+    "nombre": "Hotel Colón",
     "descuento": "15% de descuento en comisiones inmobiliarias",
-    "categoria": "Inmobiliaria",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Ocio y entretenimiento",
     "logo": "/globe.svg",
-    "web": "https://www.inmobiliarialaspiedras.com.uy",
-    "telefono": "(598) 2400 9753",
-    "email": "ventas@inmobiliarialaspiedras.com.uy",
-    "beneficios": [
-      "Descuentos en comisiones",
-      "Asesoramiento inmobiliario gratuito",
-      "Valuaciones sin costo"
-    ],
+    "activo": true
+  },
+  {
+    "id": 9,
+    "nombre": "Memory",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Software",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 10,
+    "nombre": "MontevideoCOMM",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Software",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 11,
+    "nombre": "Parque del recuerdo",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Servicios",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 12,
+    "nombre": "Parque de Minas",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Ocio y entretenimiento",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 13,
+    "nombre": "Pymes Uruguay",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Software",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 14,
+    "nombre": "Uruguay Emergencia",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Salud",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 15,
+    "nombre": "Vida",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Servicios",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 16,
+    "nombre": "Vigilia",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Servicios",
+    "logo": "/globe.svg",
+    "activo": true
+  },
+  {
+    "id": 17,
+    "nombre": "Club Solís",
+    "descuento": "15% de descuento en comisiones inmobiliarias",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "Ocio y entretenimiento",
+    "logo": "/globe.svg",
     "activo": true
   }
 ]

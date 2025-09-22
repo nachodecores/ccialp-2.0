@@ -76,7 +76,10 @@ export default function DropdownMenu() {
               key={index}
               href={item.href}
               className="block px-3 py-2 text-lg md:text-2xl lg:text-3xl hover:bg-green-600 hover:text-white transition-colors duration-150 rounded-md mx-1 mb-1"
-              style={{ color: '#2C2C2C' }}
+              style={{ 
+                color: '#2C2C2C',
+                fontFamily: 'Comfortaa, sans-serif'
+              }}
               onClick={(e) => {
                 setIsOpen(false);
                 

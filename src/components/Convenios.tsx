@@ -26,19 +26,19 @@ export default function Convenios() {
         <div className="mb-16 overflow-hidden py-8 relative">
           {/* Efecto de difuminado en los bordes - más intenso */}
           <div 
-            className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
+            className="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 pointer-events-none"
             style={{
               background: 'linear-gradient(to right, #f8f9fa 0%, #f8f9fa 30%, rgba(248, 249, 250, 0.8) 60%, rgba(248, 249, 250, 0.4) 80%, transparent 100%)'
             }}
           ></div>
           <div 
-            className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
+            className="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 pointer-events-none"
             style={{
               background: 'linear-gradient(to left, #f8f9fa 0%, #f8f9fa 30%, rgba(248, 249, 250, 0.8) 60%, rgba(248, 249, 250, 0.4) 80%, transparent 100%)'
             }}
           ></div>
           
-          <div className="flex animate-scroll space-x-16">
+          <div className="flex animate-scroll space-x-8 md:space-x-16">
             {/* Primera fila de logos */}
             {convenios.map((convenio) => (
               <div 
@@ -50,7 +50,7 @@ export default function Convenios() {
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}
-                  className="w-60 h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="w-32 h-16 md:w-60 md:h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -65,7 +65,7 @@ export default function Convenios() {
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}
-                  className="w-60 h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="w-32 h-16 md:w-60 md:h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}

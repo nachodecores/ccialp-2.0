@@ -196,12 +196,7 @@ export default function Convenios() {
                         <div className="text-xs opacity-90 mb-2">
                           {convenio.descripcion}
                         </div>
-                        <div className="text-xs opacity-75">
-                          📞 {convenio.telefono}
-                        </div>
-                        <div className="text-xs opacity-75">
-                          ✉️ {convenio.email}
-                        </div>
+                      
                       </div>
                     </div>
                   </div>
