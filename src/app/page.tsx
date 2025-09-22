@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Convenios from "@/components/Convenios";
+import Asociarse from "@/components/Asociarse";
 import CentrosPyme from "@/components/CentrosPyme";
 import Noticias from "@/components/Noticias";
 import Confederaciones from "@/components/Confederaciones";
@@ -19,6 +20,7 @@ export default function Home() {
       <Services />
       <CentrosPyme />
       <Convenios />
+      <Asociarse />
       <Noticias />
       <Confederaciones />
       <Footer />

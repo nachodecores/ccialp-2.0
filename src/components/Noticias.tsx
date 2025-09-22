@@ -17,14 +17,12 @@ interface Noticia {
 }
 
 export default function Noticias() {
-  const [mostrarMas, setMostrarMas] = useState(false);
+  const [noticiasCargadas, setNoticiasCargadas] = useState(3);
   
   // Cargar datos desde JSON
   const noticias: Noticia[] = noticiasData as Noticia[];
-  const noticiasIniciales = noticias.slice(0, 3);
-  const noticiasAdicionales = noticias.slice(3);
-  
-  const noticiasAMostrar = mostrarMas ? noticias : noticiasIniciales;
+  const noticiasAMostrar = noticias.slice(0, noticiasCargadas);
+  const hayMasNoticias = noticiasCargadas < noticias.length;
 
   const getCardClasses = (tipo: string) => {
     switch (tipo) {
@@ -51,7 +49,7 @@ export default function Noticias() {
             color: '#0F3439'
           }}
         >
-          Noticias y Actualidades
+          Noticias y Actualidad
         </h2>
 
         {/* Grid tipo Pinterest */}
@@ -62,13 +60,12 @@ export default function Noticias() {
               className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${getCardClasses(noticia.tipo)}`}
             >
               {noticia.imagen && (
-                <div className="aspect-video bg-gray-200">
-                  <div 
-                    className="w-full h-full flex items-center justify-center text-gray-500"
-                    style={{ backgroundColor: '#f3f4f6' }}
-                  >
-                    <span className="text-sm">Imagen: {noticia.titulo}</span>
-                  </div>
+                <div className="aspect-video bg-gray-200 overflow-hidden">
+                  <img
+                    src={noticia.imagen}
+                    alt={noticia.titulo}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               )}
               
@@ -125,28 +122,30 @@ export default function Noticias() {
           ))}
         </div>
 
-        {/* Botón "Ver más tarjetas" */}
-        <div className="text-center">
-          <button
-            onClick={() => setMostrarMas(!mostrarMas)}
-            className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            style={{ 
-              fontFamily: 'Kanit, sans-serif',
-              fontWeight: '600',
-              backgroundColor: '#21A85B'
-            }}
-          >
-            {mostrarMas ? 'Ver menos tarjetas' : 'Ver más tarjetas'}
-            <svg 
-              className={`ml-2 w-4 h-4 transition-transform duration-300 ${mostrarMas ? 'rotate-180' : ''}`}
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
+        {/* Botón "Cargar noticias anteriores" */}
+        {hayMasNoticias && (
+          <div className="text-center">
+            <button
+              onClick={() => setNoticiasCargadas(prev => Math.min(prev + 3, noticias.length))}
+              className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              style={{ 
+                fontFamily: 'Kanit, sans-serif',
+                fontWeight: '600',
+                backgroundColor: '#21A85B'
+              }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
+              Cargar noticias anteriores
+              <svg 
+                className="ml-2 w-4 h-4"
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
