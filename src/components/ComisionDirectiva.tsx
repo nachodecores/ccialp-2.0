@@ -2,51 +2,66 @@ export default function ComisionDirectiva() {
   const comision = [
     {
       id: 1,
-      nombre: "Dr. Juan Pérez",
+      nombre: "Carlos Delfino",
       cargo: "Presidente",
-      empresa: "Pérez & Asociados",
-      telefono: "(598) 2364 1234",
-      email: "jperez@ccialp.org.uy"
+      empresa: "Ferox S.R.L.",
+      esEjecutivo: true
     },
     {
       id: 2,
-      nombre: "Ing. María González",
-      cargo: "Vicepresidenta",
-      empresa: "González Industrial",
-      telefono: "(598) 2364 5678",
-      email: "mgonzalez@ccialp.org.uy"
+      nombre: "Andrés Barabino",
+      cargo: "Vicepresidente",
+      empresa: "Carambula Administraciones",
+      esEjecutivo: true
     },
     {
       id: 3,
-      nombre: "Lic. Carlos Rodríguez",
+      nombre: "Joaquín Vilar",
       cargo: "Secretario",
-      empresa: "Rodríguez Consultores",
-      telefono: "(598) 2364 9012",
-      email: "crodriguez@ccialp.org.uy"
+      empresa: "Joyería Arte",
+      esEjecutivo: true
     },
     {
       id: 4,
-      nombre: "C.P. Ana Martínez",
-      cargo: "Tesorera",
-      empresa: "Martínez Contadores",
-      telefono: "(598) 2364 3456",
-      email: "amartinez@ccialp.org.uy"
+      nombre: "Oscar Vargas",
+      cargo: "Tesorero",
+      empresa: "eShop Informática",
+      esEjecutivo: true
     },
     {
       id: 5,
-      nombre: "Arq. Roberto Silva",
+      nombre: "Natalia Machín",
       cargo: "Vocal",
-      empresa: "Silva Arquitectos",
-      telefono: "(598) 2364 7890",
-      email: "rsilva@ccialp.org.uy"
+      empresa: "Maple Vila",
+      esEjecutivo: false
     },
     {
       id: 6,
-      nombre: "Dra. Laura Fernández",
+      nombre: "Fabricio Camacho",
       cargo: "Vocal",
-      empresa: "Fernández Legal",
-      telefono: "(598) 2364 2468",
-      email: "lfernandez@ccialp.org.uy"
+      empresa: "FullCar",
+      esEjecutivo: false
+    },
+    {
+      id: 7,
+      nombre: "Gastón Rossi",
+      cargo: "Vocal",
+      empresa: "Rossi Administraciones",
+      esEjecutivo: false
+    },
+    {
+      id: 8,
+      nombre: "Cristina Villamayor",
+      cargo: "Vocal",
+      empresa: "Empresa Villamayor",
+      esEjecutivo: false
+    },
+    {
+      id: 9,
+      nombre: "Victorio Geron",
+      cargo: "Vocal",
+      empresa: "Inmobiliaria Las Piedras",
+      esEjecutivo: false
     }
   ];
 
@@ -77,77 +92,141 @@ export default function ComisionDirectiva() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {comision.map((miembro) => (
-            <div 
-              key={miembro.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100"
+        {/* Formato Lista */}
+        <div className="max-w-4xl mx-auto">
+          {/* Cargos Ejecutivos */}
+          <div className="mb-12">
+            <h3 
+              className="text-2xl font-bold mb-6"
+              style={{ 
+                fontFamily: 'Kanit, sans-serif',
+                fontWeight: '600',
+                color: '#0F3439'
+              }}
             >
-              {/* Avatar placeholder */}
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#21A85B' }}>
-                <span className="text-2xl text-white font-bold">
-                  {miembro.nombre.split(' ').map(n => n[0]).join('')}
-                </span>
-              </div>
-              
-              {/* Información del miembro */}
-              <div className="text-center">
-                <h3 
-                  className="text-xl font-semibold mb-2"
-                  style={{ 
-                    fontFamily: 'Kanit, sans-serif',
-                    fontWeight: '600',
-                    color: '#0F3439'
-                  }}
-                >
-                  {miembro.nombre}
-                </h3>
-                
+              Cargos Ejecutivos
+            </h3>
+            <div className="space-y-4">
+              {comision.filter(miembro => miembro.esEjecutivo).map((miembro, index) => (
                 <div 
-                  className="text-sm font-semibold mb-2 px-3 py-1 rounded-full inline-block"
-                  style={{ 
-                    backgroundColor: '#21A85B',
-                    color: '#ffffff',
-                    fontFamily: 'Inter, sans-serif'
-                  }}
+                  key={miembro.id}
+                  className="flex items-center py-4 px-6 bg-gradient-to-r from-primary-green/5 to-transparent border-l-4 border-primary-green hover:from-primary-green/10 transition-colors duration-200"
                 >
-                  {miembro.cargo}
+                  {/* Avatar pequeño */}
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style={{ backgroundColor: '#21A85B' }}>
+                    <span className="text-sm text-white font-bold">
+                      {miembro.nombre.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  
+                  {/* Información */}
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                      <div>
+                        <h4 
+                          className="text-lg font-semibold"
+                          style={{ 
+                            fontFamily: 'Kanit, sans-serif',
+                            fontWeight: '600',
+                            color: '#0F3439'
+                          }}
+                        >
+                          {miembro.nombre}
+                        </h4>
+                        <p 
+                          className="text-sm"
+                          style={{ 
+                            fontFamily: 'Inter, sans-serif',
+                            fontWeight: '400',
+                            color: '#6B6B6B'
+                          }}
+                        >
+                          {miembro.empresa}
+                        </p>
+                      </div>
+                      <div 
+                        className="text-sm font-semibold px-3 py-1 rounded-full mt-2 md:mt-0 inline-block"
+                        style={{ 
+                          backgroundColor: '#21A85B',
+                          color: '#ffffff',
+                          fontFamily: 'Inter, sans-serif'
+                        }}
+                      >
+                        {miembro.cargo}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <p 
-                  className="text-sm mb-3"
-                  style={{ 
-                    fontFamily: 'Inter, sans-serif',
-                    fontWeight: '400',
-                    color: '#6B6B6B'
-                  }}
-                >
-                  {miembro.empresa}
-                </p>
-                
-                <div className="space-y-1">
-                  <p 
-                    className="text-xs"
-                    style={{ 
-                      fontFamily: 'Inter, sans-serif',
-                      color: '#2C2C2C'
-                    }}
-                  >
-                    📞 {miembro.telefono}
-                  </p>
-                  <p 
-                    className="text-xs"
-                    style={{ 
-                      fontFamily: 'Inter, sans-serif',
-                      color: '#2C2C2C'
-                    }}
-                  >
-                    ✉️ {miembro.email}
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Vocales */}
+          <div>
+            <h3 
+              className="text-2xl font-bold mb-6"
+              style={{ 
+                fontFamily: 'Kanit, sans-serif',
+                fontWeight: '600',
+                color: '#0F3439'
+              }}
+            >
+              Vocales
+            </h3>
+            <div className="space-y-3">
+              {comision.filter(miembro => !miembro.esEjecutivo).map((miembro, index) => (
+                <div 
+                  key={miembro.id}
+                  className="flex items-center py-3 px-6 bg-gray-50 hover:bg-gray-100 transition-colors duration-200 border-l-4 border-gray-300"
+                >
+                  {/* Avatar pequeño */}
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style={{ backgroundColor: '#6B6B6B' }}>
+                    <span className="text-xs text-white font-bold">
+                      {miembro.nombre.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  
+                  {/* Información */}
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                      <div>
+                        <h4 
+                          className="text-base font-semibold"
+                          style={{ 
+                            fontFamily: 'Kanit, sans-serif',
+                            fontWeight: '600',
+                            color: '#0F3439'
+                          }}
+                        >
+                          {miembro.nombre}
+                        </h4>
+                        <p 
+                          className="text-sm"
+                          style={{ 
+                            fontFamily: 'Inter, sans-serif',
+                            fontWeight: '400',
+                            color: '#6B6B6B'
+                          }}
+                        >
+                          {miembro.empresa}
+                        </p>
+                      </div>
+                      <div 
+                        className="text-xs font-semibold px-2 py-1 rounded-full mt-2 md:mt-0 inline-block"
+                        style={{ 
+                          backgroundColor: '#6B6B6B',
+                          color: '#ffffff',
+                          fontFamily: 'Inter, sans-serif'
+                        }}
+                      >
+                        {miembro.cargo}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

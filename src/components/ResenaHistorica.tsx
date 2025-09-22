@@ -15,9 +15,9 @@ export default function ResenaHistorica() {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Contenido de texto */}
-          <div className="space-y-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Contenido de texto centrado */}
+          <div className="space-y-6 text-center">
             <p 
               className="text-lg leading-relaxed"
               style={{ 
@@ -58,32 +58,6 @@ export default function ResenaHistorica() {
               facilitar el networking empresarial y brindar las herramientas necesarias para 
               el éxito de nuestros asociados.
             </p>
-          </div>
-          
-          {/* Elemento visual decorativo */}
-          <div className="flex justify-center lg:justify-end">
-            <div 
-              className="w-80 h-80 rounded-full flex items-center justify-center"
-              style={{ 
-                background: 'linear-gradient(135deg, #21A85B 0%, #0F3439 100%)',
-                boxShadow: '0 20px 40px rgba(33, 168, 91, 0.3)'
-              }}
-            >
-              <div className="text-center text-white">
-                <div 
-                  className="text-6xl font-bold mb-2"
-                  style={{ fontFamily: 'Kanit, sans-serif' }}
-                >
-                  95+
-                </div>
-                <div 
-                  className="text-xl font-semibold"
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                >
-                  Años de Historia
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -22,31 +22,19 @@ export default function Asociarse() {
 
         
 
-        {/* Botón de llamada a la acción */}
+        {/* Texto de llamada a la acción */}
         <div className="text-center">
           <Link 
             href="/asociarse"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+            className="inline-block text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-300 hover:scale-110 animate-pulse"
             style={{ 
               fontFamily: 'Kanit, sans-serif',
               fontWeight: '600',
-              backgroundColor: '#21A85B'
+              color: '#21A85B',
+              textShadow: '0 2px 4px rgba(33, 168, 91, 0.3)'
             }}
           >
             ... hacete socio!
-            <svg 
-              className="ml-2 w-5 h-5" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M9 5l7 7-7 7" 
-              />
-            </svg>
           </Link>
         </div>
 
