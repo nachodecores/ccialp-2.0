@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Asociarse() {
   return (
-    <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#ffffff' }}>
+    <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#FFFBF0' }}>
       <div className="max-w-4xl mx-auto text-center">
         {/* Título y descripción */}
         <div className="mb-8">

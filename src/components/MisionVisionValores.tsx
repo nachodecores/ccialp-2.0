@@ -49,7 +49,7 @@ export default function MisionVisionValores() {
                 color: '#0F3439'
               }}
             >
-              Misión
+              MISION
             </h3>
             <p 
               className="text-base leading-relaxed"
@@ -86,7 +86,7 @@ export default function MisionVisionValores() {
                 color: '#0F3439'
               }}
             >
-              Visión
+              VISION
             </h3>
             <p 
               className="text-base leading-relaxed"
@@ -124,10 +124,10 @@ export default function MisionVisionValores() {
                 color: '#0F3439'
               }}
             >
-              Valores
+              VALORES
             </h3>
-            <p 
-              className="text-base leading-relaxed"
+            <ul 
+              className="text-base leading-relaxed space-y-2"
               style={{ 
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: '400',
@@ -135,14 +135,14 @@ export default function MisionVisionValores() {
                 lineHeight: '1.6'
               }}
             >
-              <strong>Compromiso:</strong> Con el desarrollo de nuestros socios y la comunidad local. 
-              <strong>Transparencia:</strong> En todas nuestras acciones y decisiones. 
-              <strong>Colaboración:</strong> Como base para el crecimiento conjunto. 
-              <strong>Excelencia:</strong> En cada servicio que brindamos. 
-              <strong>Innovación:</strong> Para adaptarnos a los desafíos del futuro. 
-              <strong>Integridad:</strong> Como principio fundamental en nuestras relaciones. 
-              <strong>Sostenibilidad:</strong> Para garantizar un futuro próspero para las próximas generaciones.
-            </p>
+              <li><strong>Compromiso:</strong> Con el desarrollo de nuestros socios y la comunidad local.</li>
+              <li><strong>Transparencia:</strong> En todas nuestras acciones y decisiones.</li>
+              <li><strong>Colaboración:</strong> Como base para el crecimiento conjunto.</li>
+              <li><strong>Excelencia:</strong> En cada servicio que brindamos.</li>
+              <li><strong>Innovación:</strong> Para adaptarnos a los desafíos del futuro.</li>
+              <li><strong>Integridad:</strong> Como principio fundamental en nuestras relaciones.</li>
+              <li><strong>Sostenibilidad:</strong> Para garantizar un futuro próspero para las próximas generaciones.</li>
+            </ul>
           </div>
       </div>
     </section>

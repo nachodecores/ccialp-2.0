@@ -1,9 +1,9 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import conveniosData from '@/data/convenios.json';
+import HeaderPaginas from '@/components/HeaderPaginas';
 
 export default function Convenios() {
   const convenios = conveniosData.filter(convenio => convenio.activo);
@@ -22,23 +22,8 @@ export default function Convenios() {
   };
   return (
     <div className="min-h-screen">
-      {/* Header con navegación de vuelta */}
-      <header className="w-full h-16 bg-primary-dark flex items-center justify-between px-4">
-        <Link 
-          href="/" 
-          className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
-        >
-          <Image
-            src="/assets/logos/back-to-main.svg"
-            alt="Volver al inicio"
-            width={24}
-            height={20}
-            className="w-6 h-5"
-          />
-          <span>Volver al inicio</span>
-        </Link>
-        <div></div>
-      </header>
+      {/* Header reutilizable */}
+      <HeaderPaginas />
 
       {/* Contenido principal */}
       <main className="relative">
@@ -120,19 +105,9 @@ export default function Convenios() {
                   lineHeight: '1.6'
                 }}
               >
-                Trabajamos con empresas líderes para ofrecerte beneficios exclusivos y descuentos especiales.
+                Trabajamos con empresas líderes para ofrecerte beneficios exclusivos y descuentos especiales para nuestros socios.
               </p>
               
-              <p 
-                style={{ 
-                  fontFamily: 'Inter, sans-serif',
-                  fontWeight: '400',
-                  lineHeight: '1.6'
-                }}
-              >
-                Nuestros convenios te permiten acceder a servicios de calidad con precios preferenciales, 
-                fortaleciendo así el ecosistema empresarial local.
-              </p>
             </div>
 
             {/* Grid de convenios */}
@@ -165,13 +140,13 @@ export default function Convenios() {
                           {convenio.categoria}
                         </div>
                         
-                        <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        <div className="w-32 h-32 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2">
                           <Image
                             src={convenio.logo}
                             alt={`Logo de ${convenio.nombre}`}
-                            width={48}
-                            height={48}
-                            className="w-12 h-12"
+                            width={80}
+                            height={80}
+                            className="w-full h-full object-contain"
                           />
                         </div>
                         <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif' }}>

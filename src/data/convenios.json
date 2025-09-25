@@ -5,7 +5,7 @@
     "descuento": "Hasta 15% de descuento en tasas de interés",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/crami.png",
     "activo": true
   },
   {
@@ -14,7 +14,7 @@
     "descuento": "20% de descuento en pólizas empresariales",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Ocio y entretenimiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/hotel-royak.png",
     "activo": true
   },
   {
@@ -23,7 +23,7 @@
     "descuento": "25% de descuento en servicios de IT",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/la-espanola.png",
     "activo": true
   },
   {
@@ -32,7 +32,7 @@
     "descuento": "30% de descuento en consultorías",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/clinilab.jpg",
     "activo": true
   },
   {
@@ -41,7 +41,7 @@
     "descuento": "18% de descuento en servicios de transporte",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Financiamiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/acac.png",
     "activo": true
   },
   {
@@ -50,7 +50,7 @@
     "descuento": "22% de descuento en campañas publicitarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/asem.png",
     "activo": true
   },
   {
@@ -59,7 +59,7 @@
     "descuento": "20% de descuento en servicios contables",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Financiamiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/fundasol.png",
     "activo": true
   },
   {
@@ -68,7 +68,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Ocio y entretenimiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/hotelcolon.jpg",
     "activo": true
   },
   {
@@ -77,7 +77,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Software",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/memory.png",
     "activo": true
   },
   {
@@ -86,7 +86,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Software",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/montevideocomm.png",
     "activo": true
   },
   {
@@ -95,7 +95,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Servicios",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/parquedelrecuerdo.png",
     "activo": true
   },
   {
@@ -104,7 +104,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Ocio y entretenimiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/parqueminas.jpg",
     "activo": true
   },
   {
@@ -113,7 +113,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Software",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/pymesuruguay.jpg",
     "activo": true
   },
   {
@@ -122,7 +122,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Salud",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/uruguay-emergencia.png",
     "activo": true
   },
   {
@@ -131,7 +131,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Servicios",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/vida.png",
     "activo": true
   },
   {
@@ -140,7 +140,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Servicios",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/vigilia.png",
     "activo": true
   },
   {
@@ -149,7 +149,7 @@
     "descuento": "15% de descuento en comisiones inmobiliarias",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "categoria": "Ocio y entretenimiento",
-    "logo": "/globe.svg",
+    "logo": "/assets/images/clubsolis.jpeg",
     "activo": true
   }
 ]

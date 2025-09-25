@@ -65,20 +65,26 @@ export default function DropdownMenu() {
         style={{ 
           backgroundColor: '#f5f5f5',
           right: '0',
-          width: '16rem',
+          width: '20rem',
           transform: isOpen ? 'translateX(0)' : 'translateX(0) translateY(-0.5rem)',
           maxWidth: 'calc(100vw - 2rem)'
         }}
       >
-        <div className="py-2 px-2">
+        <div className="py-4 px-4">
           {menuItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className="block px-3 py-2 text-lg md:text-2xl lg:text-3xl hover:bg-green-600 hover:text-white transition-colors duration-150 rounded-md mx-1 mb-1"
+              className="block px-4 py-3 text-lg md:text-2xl lg:text-3xl hover:bg-green-800 transition-colors duration-150 rounded-md mx-1 mb-2"
               style={{ 
                 color: '#2C2C2C',
                 fontFamily: 'Comfortaa, sans-serif'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#2C2C2C';
               }}
               onClick={(e) => {
                 setIsOpen(false);

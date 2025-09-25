@@ -50,7 +50,8 @@ export default function Convenios() {
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}
-                  className="w-32 h-16 md:w-60 md:h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="w-40 h-20 md:w-72 md:h-36 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             ))}
@@ -65,7 +66,8 @@ export default function Convenios() {
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}
-                  className="w-32 h-16 md:w-60 md:h-30 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="w-40 h-20 md:w-72 md:h-36 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             ))}

@@ -17,9 +17,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col items-center gap-12">
           {/* Quote centrada */}
-          <div className="text-center w-7/10">
+          <div className="text-center w-7/10 px-8 md:px-24 lg:px-32">
             <h3 
-              className="text-lg font-semibold text-white font-kanit"
+              className="text-2xl font-normal text-white/80 font-kanit"
             >
               "Algunos ven al empresario como el lobo al que hay que abatir, otros lo ven como la vaca que hay que ordeñar, pero muy pocos lo ven como el caballo que tira del carro"
             </h3>

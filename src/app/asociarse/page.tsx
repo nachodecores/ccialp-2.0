@@ -1,26 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import HeaderPaginas from "@/components/HeaderPaginas";
 
 export default function Asociarse() {
   return (
     <div className="min-h-screen">
-      {/* Header con navegación de vuelta */}
-      <header className="w-full h-16 bg-primary-dark flex items-center justify-between px-4">
-        <Link 
-          href="/" 
-          className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
-        >
-          <Image
-            src="/assets/logos/back-to-main.svg"
-            alt="Volver al inicio"
-            width={24}
-            height={20}
-            className="w-6 h-5"
-          />
-          <span>Volver al inicio</span>
-        </Link>
-        <div></div>
-      </header>
+      {/* Header reutilizable */}
+      <HeaderPaginas />
 
       {/* Contenido principal */}
       <main className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#f8f9fa' }}>

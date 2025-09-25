@@ -57,14 +57,14 @@ export default function Noticias() {
           {noticiasAMostrar.map((noticia) => (
             <div
               key={noticia.id}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${getCardClasses(noticia.tipo)}`}
+              className={`bg-white rounded-xl shadow-lg overflow-hidden ${getCardClasses(noticia.tipo)}`}
             >
               {noticia.imagen && (
                 <div className="aspect-video bg-gray-200 overflow-hidden">
                   <img
                     src={noticia.imagen}
                     alt={noticia.titulo}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}
@@ -127,7 +127,7 @@ export default function Noticias() {
           <div className="text-center">
             <button
               onClick={() => setNoticiasCargadas(prev => Math.min(prev + 3, noticias.length))}
-              className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg"
               style={{ 
                 fontFamily: 'Kanit, sans-serif',
                 fontWeight: '600',
