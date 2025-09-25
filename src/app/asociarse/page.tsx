@@ -1,4 +1,5 @@
 import HeaderPaginas from "@/components/HeaderPaginas";
+import Footer from "@/components/Footer";
 
 export default function Asociarse() {
   return (
@@ -195,6 +196,9 @@ export default function Asociarse() {
           </div>
         </div>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

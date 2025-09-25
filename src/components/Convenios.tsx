@@ -5,7 +5,7 @@ import conveniosData from '@/data/convenios.json';
 export default function Convenios() {
   const convenios = conveniosData.filter(convenio => convenio.activo);
   return (
-    <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#f8f9fa' }}>
+    <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#0F3439' }}>
       <div className="max-w-6xl mx-auto">
         {/* Título y descripción */}
         <div className="text-center mb-8">
@@ -14,7 +14,7 @@ export default function Convenios() {
             style={{ 
               fontFamily: 'Kanit, sans-serif',
               fontWeight: '600',
-              color: '#0F3439'
+              color: 'white'
             }}
           >
             Ser socio del Centro te conviene
@@ -28,13 +28,13 @@ export default function Convenios() {
           <div 
             className="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 pointer-events-none"
             style={{
-              background: 'linear-gradient(to right, #f8f9fa 0%, #f8f9fa 30%, rgba(248, 249, 250, 0.8) 60%, rgba(248, 249, 250, 0.4) 80%, transparent 100%)'
+              background: 'linear-gradient(to right, #0F3439 0%, #0F3439 30%, rgba(15, 52, 57, 0.8) 60%, rgba(15, 52, 57, 0.4) 80%, transparent 100%)'
             }}
           ></div>
           <div 
             className="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 pointer-events-none"
             style={{
-              background: 'linear-gradient(to left, #f8f9fa 0%, #f8f9fa 30%, rgba(248, 249, 250, 0.8) 60%, rgba(248, 249, 250, 0.4) 80%, transparent 100%)'
+              background: 'linear-gradient(to left, #0F3439 0%, #0F3439 30%, rgba(15, 52, 57, 0.8) 60%, rgba(15, 52, 57, 0.4) 80%, transparent 100%)'
             }}
           ></div>
           

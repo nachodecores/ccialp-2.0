@@ -53,7 +53,7 @@ export default function Noticias() {
         </h2>
 
         {/* Grid tipo Pinterest */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
           {noticiasAMostrar.map((noticia) => (
             <div
               key={noticia.id}

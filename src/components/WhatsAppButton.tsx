@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   return (
     <div 
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50"
       style={{ 
         position: 'fixed',
         bottom: '24px',

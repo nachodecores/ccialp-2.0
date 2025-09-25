@@ -1,7 +1,23 @@
 export default function ResenaHistorica() {
   return (
-    <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#ffffff' }}>
-      <div className="max-w-6xl mx-auto">
+    <section 
+      className="w-full py-32 px-4 md:px-8 lg:px-16 relative overflow-hidden parallax-section" 
+      style={{ 
+        backgroundImage: 'url(/assets/images/acta_inicial.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Overlay para mejorar legibilidad */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ 
+          backgroundColor: 'rgba(255, 255, 255, 0.85)' // Overlay blanco semi-transparente
+        }}
+      />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"

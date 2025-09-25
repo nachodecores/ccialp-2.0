@@ -2,6 +2,7 @@ import ResenaHistorica from "@/components/ResenaHistorica";
 import MisionVisionValores from "@/components/MisionVisionValores";
 import ComisionDirectiva from "@/components/ComisionDirectiva";
 import HeaderPaginas from "@/components/HeaderPaginas";
+import Footer from "@/components/Footer";
 
 export default function Nosotros() {
   return (
@@ -11,10 +12,13 @@ export default function Nosotros() {
 
       {/* Contenido principal */}
       <main>
-        <ResenaHistorica />
         <MisionVisionValores />
+        <ResenaHistorica />
         <ComisionDirectiva />
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

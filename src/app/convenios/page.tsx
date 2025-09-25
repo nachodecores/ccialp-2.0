@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import conveniosData from '@/data/convenios.json';
 import HeaderPaginas from '@/components/HeaderPaginas';
+import Footer from '@/components/Footer';
 
 export default function Convenios() {
   const convenios = conveniosData.filter(convenio => convenio.activo);
@@ -183,6 +184,9 @@ export default function Convenios() {
           </div>
         </div>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

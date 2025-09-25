@@ -97,4 +97,26 @@ body {
   }
 }
 
+/* Efecto parallax con CSS puro */
+.parallax-section {
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+/* Asegurar que el parallax funcione en todos los navegadores */
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-section {
+    background-attachment: fixed;
+  }
+}
+
+/* Fallback para navegadores que no soportan background-attachment: fixed */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
 
