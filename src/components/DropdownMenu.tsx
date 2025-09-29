@@ -10,6 +10,8 @@ export default function DropdownMenu() {
     { name: 'NOSOTROS', href: '/nosotros' },
     { name: 'SERVICIOS', href: '#services' },
     { name: 'CONVENIOS', href: '/convenios' },
+    { name: 'NOTICIAS', href: '/noticias' },
+    { name: 'ASOCIARSE', href: '/asociarse' },
     { name: 'CONTACTO', href: '#contacto' },
   ];
 
@@ -96,17 +98,19 @@ export default function DropdownMenu() {
                 }
                 
                 // Si es un enlace a una sección (empieza con #), hacer scroll suave
-                e.preventDefault();
-                setTimeout(() => {
-                  const element = document.querySelector(item.href);
-                  if (element) {
-                    element.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start',
-                      inline: 'nearest'
-                    });
-                  }
-                }, 150);
+                if (item.href.startsWith('#')) {
+                  e.preventDefault();
+                  setTimeout(() => {
+                    const element = document.querySelector(item.href);
+                    if (element) {
+                      element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start',
+                        inline: 'nearest'
+                      });
+                    }
+                  }, 150);
+                }
               }}
             >
               {item.name}

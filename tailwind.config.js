@@ -111,6 +111,8 @@ module.exports = {
         'scroll': 'scroll 20s linear infinite',
         'bounce-subtle': 'bounce 2s infinite',
         'float': 'float 3s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 2.5s ease-in-out infinite',
+        'checkerboard': 'checkerboard 20s linear infinite',
       },
       
       // Keyframes personalizados
@@ -127,6 +129,36 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-8px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { 
+            opacity: '1',
+            color: '#21A85B',
+            textShadow: '0 2px 4px rgba(33, 168, 91, 0.3)',
+            transform: 'scale(1)'
+          },
+          '25%': { 
+            opacity: '0.8',
+            color: '#0F5A2E',
+            textShadow: '0 4px 8px rgba(33, 168, 91, 0.5)',
+            transform: 'scale(1.02)'
+          },
+          '50%': { 
+            opacity: '0.9',
+            color: '#1A8A4A',
+            textShadow: '0 6px 12px rgba(33, 168, 91, 0.7)',
+            transform: 'scale(1.05)'
+          },
+          '75%': { 
+            opacity: '0.85',
+            color: '#0F5A2E',
+            textShadow: '0 4px 8px rgba(33, 168, 91, 0.5)',
+            transform: 'scale(1.02)'
+          }
+        },
+        'checkerboard': {
+          '0%': { transform: 'translateX(0) translateY(0)' },
+          '100%': { transform: 'translateX(-100px) translateY(-100px)' }
         }
       }
     },

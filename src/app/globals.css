@@ -97,6 +97,22 @@ body {
   }
 }
 
+/* Animación sutil para sugerir interacción en la primera card */
+.animate-hint-click {
+  animation: hint-click 3s ease-in-out infinite;
+}
+
+@keyframes hint-click {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
 /* Efecto parallax con CSS puro */
 .parallax-section {
   background-attachment: fixed !important;
@@ -116,6 +132,38 @@ body {
 @media (max-width: 768px) {
   .parallax-section {
     background-attachment: scroll;
+  }
+}
+
+/* Animación sugestiva para llamada a la acción */
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    color: #21A85B;
+    text-shadow: 0 2px 4px rgba(33, 168, 91, 0.3);
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    color: #0F5A2E;
+    text-shadow: 0 4px 8px rgba(33, 168, 91, 0.5);
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.9;
+    color: #1A8A4A;
+    text-shadow: 0 6px 12px rgba(33, 168, 91, 0.7);
+    transform: scale(1.05);
+  }
+  75% {
+    opacity: 0.85;
+    color: #0F5A2E;
+    text-shadow: 0 4px 8px rgba(33, 168, 91, 0.5);
+    transform: scale(1.02);
   }
 }
 

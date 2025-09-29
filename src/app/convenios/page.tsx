@@ -113,12 +113,13 @@ export default function Convenios() {
 
             {/* Grid de convenios */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {convenios.map((convenio) => {
+              {convenios.map((convenio, index) => {
                 const isFlipped = flippedCards.has(convenio.id);
+                const isFirstCard = index === 0;
                 return (
                   <div 
                     key={convenio.id} 
-                    className="flip-card h-64 cursor-pointer"
+                    className={`flip-card h-64 cursor-pointer ${isFirstCard ? 'animate-hint-click' : ''}`}
                     style={{ perspective: '1000px' }}
                     onClick={() => handleCardFlip(convenio.id)}
                   >
@@ -141,7 +142,7 @@ export default function Convenios() {
                           {convenio.categoria}
                         </div>
                         
-                        <div className="w-32 h-32 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2">
+                        <div className="w-32 h-32 mx-auto my-6 bg-white rounded-lg flex items-center justify-center p-2">
                           <Image
                             src={convenio.logo}
                             alt={`Logo de ${convenio.nombre}`}

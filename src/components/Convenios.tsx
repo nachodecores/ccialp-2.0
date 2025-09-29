@@ -78,7 +78,7 @@ export default function Convenios() {
         <div className="text-center">
           <Link 
             href="/convenios"
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+            className="inline-flex items-center justify-center px-6 py-3 text-2xl md:text-3xl lg:text-4xl font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             style={{ 
               fontFamily: 'Kanit, sans-serif',
               fontWeight: '600',

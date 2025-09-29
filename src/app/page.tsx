@@ -9,7 +9,6 @@ import CentrosPyme from "@/components/CentrosPyme";
 import Noticias from "@/components/Noticias";
 import Confederaciones from "@/components/Confederaciones";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
       <Noticias />
       <Confederaciones />
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }

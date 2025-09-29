@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 import Link from "next/link";
 import noticiasData from '@/data/noticias.json';
 
@@ -17,12 +16,9 @@ interface Noticia {
 }
 
 export default function Noticias() {
-  const [noticiasCargadas, setNoticiasCargadas] = useState(3);
-  
   // Cargar datos desde JSON
   const noticias: Noticia[] = noticiasData as Noticia[];
-  const noticiasAMostrar = noticias.slice(0, noticiasCargadas);
-  const hayMasNoticias = noticiasCargadas < noticias.length;
+  const noticiasAMostrar = noticias.slice(0, 3); // Mostrar solo las primeras 3 noticias
 
   const getCardClasses = (tipo: string) => {
     switch (tipo) {
@@ -40,17 +36,7 @@ export default function Noticias() {
   return (
     <section className="w-full py-8 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-7xl mx-auto">
-        {/* Título */}
-        <h2 
-          className="text-3xl md:text-4xl font-bold mb-8 text-center"
-          style={{ 
-            fontFamily: 'Kanit, sans-serif',
-            fontWeight: '600',
-            color: '#0F3439'
-          }}
-        >
-          Noticias y Actualidad
-        </h2>
+        
 
         {/* Grid tipo Pinterest */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
@@ -122,30 +108,28 @@ export default function Noticias() {
           ))}
         </div>
 
-        {/* Botón "Cargar noticias anteriores" */}
-        {hayMasNoticias && (
-          <div className="text-center">
-            <button
-              onClick={() => setNoticiasCargadas(prev => Math.min(prev + 3, noticias.length))}
-              className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg"
-              style={{ 
-                fontFamily: 'Kanit, sans-serif',
-                fontWeight: '600',
-                backgroundColor: '#21A85B'
-              }}
+        {/* Botón "Ver todas las noticias" */}
+        <div className="text-center">
+          <Link
+            href="/noticias"
+            className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+            style={{ 
+              fontFamily: 'Kanit, sans-serif',
+              fontWeight: '600',
+              backgroundColor: '#21A85B'
+            }}
+          >
+            Ver todas las noticias
+            <svg 
+              className="ml-2 w-4 h-4"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
             >
-              Cargar noticias anteriores
-              <svg 
-                className="ml-2 w-4 h-4"
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-          </div>
-        )}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

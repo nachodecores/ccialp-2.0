@@ -30,8 +30,27 @@ export default function MisionVisionValores() {
     };
   }, []);
   return (
-    <section ref={sectionRef} className="w-full py-16 px-4 md:px-8 lg:px-16 flex flex-col gap-8" style={{ backgroundColor: '#f8f9fa' }}>
-      <div className="max-w-4xl mx-auto flex flex-col gap-8">
+    <section ref={sectionRef} className="w-full py-16 px-4 md:px-8 lg:px-16 flex flex-col gap-8 relative" style={{ backgroundColor: '#f8f9fa' }}>
+      {/* Logo de fondo transparente */}
+      <div 
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        style={{ 
+          opacity: 0.12,
+          zIndex: 1
+        }}
+      >
+        <img
+          src="/assets/logos/logo-min-verde.svg"
+          alt="CCIALP Logo"
+          className="w-[500px] h-[350px] md:w-[600px] md:h-[400px] lg:w-[800px] lg:h-[500px] object-contain"
+          style={{ 
+            filter: 'blur(1px)',
+            transform: 'scale(1.2)'
+          }}
+        />
+      </div>
+      
+      <div className="max-w-4xl mx-auto flex flex-col gap-8 relative z-10 py-24">
           {/* Misión */}
           <div 
             className={`text-left transition-all duration-700 ease-out w-2/3 ${

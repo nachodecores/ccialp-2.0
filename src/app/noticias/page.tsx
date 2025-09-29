@@ -1,9 +1,8 @@
 import HeaderPaginas from "@/components/HeaderPaginas";
 import Footer from "@/components/Footer";
-import PlanesSuscripcion from "@/components/PlanesSuscripcion";
-import FormularioSuscripcion from "@/components/FormularioSuscripcion";
+import NoticiasCompletas from "@/components/NoticiasCompletas";
 
-export default function Asociarse() {
+export default function Noticias() {
   return (
     <div className="min-h-screen">
       {/* Header reutilizable */}
@@ -11,8 +10,7 @@ export default function Asociarse() {
 
       {/* Contenido principal */}
       <main className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#f8f9fa' }}>
-        <PlanesSuscripcion />
-        <FormularioSuscripcion />
+        <NoticiasCompletas />
       </main>
       
       {/* Footer */}

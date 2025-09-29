@@ -39,11 +39,18 @@ export default function Footer() {
                     alt="Ubicación"
                     className="w-5 h-5 flex-shrink-0"
                   />
-                  <p 
-                    className="text-sm text-white font-inter font-normal"
+                  <Link 
+                    href="https://www.google.com/maps/place/Centro+Comercial+Las+Piedras/@-34.7285553,-56.2202789,867m/data=!3m1!1e3!4m6!3m5!1s0x95a1d2bad6d2ae4b:0x81d93a0b78411f85!8m2!3d-34.7283328!4d-56.2171547!16s%2Fg%2F11c1szy2x0?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity duration-300"
                   >
-                    Lavalleja 664, Las Piedras, Canelones
-                  </p>
+                    <p 
+                      className="text-sm text-white font-inter font-normal"
+                    >
+                      Lavalleja 646, Las Piedras
+                    </p>
+                  </Link>
                 </div>
                 
                 <div className="flex items-center gap-3">
@@ -55,8 +62,28 @@ export default function Footer() {
                   <p 
                     className="text-sm text-white font-inter font-normal"
                   >
-                    (598) 2364 1234
+                    (+598) 2364 4108
                   </p>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <img 
+                    src="/assets/icons/link-wa-blanco.svg"
+                    alt="WhatsApp"
+                    className="w-5 h-5 flex-shrink-0"
+                  />
+                  <Link 
+                    href="https://wa.me/59899320115?text=Buenas,%20tengo%20una%20consulta%20para%20hacerles"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity duration-300"
+                  >
+                    <p 
+                      className="text-sm text-white font-inter font-normal"
+                    >
+                      (+598) 99 320 115
+                    </p>
+                  </Link>
                 </div>
                 
                 <div className="flex items-center gap-3">

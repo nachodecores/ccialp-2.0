@@ -5,34 +5,17 @@ export default function WhatsAppButton() {
     <div 
       className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50"
       style={{ 
-        position: 'fixed',
-        bottom: '24px',
-        right: '24px',
-        zIndex: 9999,
         animation: 'float 3s ease-in-out infinite'
       }}
     >
       <a
-        href="https://wa.me/59899320115?"
+        href="https://wa.me/59899320115?text=Buenas,%20tengo%20una%20consulta%20para%20hacerles"
         target="_blank"
         rel="noopener noreferrer"
+        className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg hover:scale-110 transition-all duration-300 ease-in-out no-underline"
         style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '84px',
-          height: '84px',
           backgroundColor: '#25D366',
-          borderRadius: '50%',
-          boxShadow: '0 6px 18px rgba(0,0,0,0.3)',
-          textDecoration: 'none',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'scale(1.1)';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = 'scale(1)';
+          boxShadow: '0 6px 18px rgba(0,0,0,0.3)'
         }}
       >
         <svg 
