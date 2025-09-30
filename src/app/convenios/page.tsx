@@ -30,11 +30,11 @@ export default function Convenios() {
       <main className="relative">
         {/* Fondo dinámico sutil */}
         <div className="absolute inset-0 w-full min-h-screen overflow-hidden">
-          {/* Gradiente base */}
+          {/* Gradiente largo hacia abajo */}
           <div 
             className="absolute inset-0 w-full h-full"
             style={{ 
-              background: 'linear-gradient(135deg, #0F3439 0%, #1a4a52 50%, #0F3439 100%)'
+              background: 'linear-gradient(180deg, #0F3439 0%, #1a4a52 30%, #2C6F78 60%, #ffffff 100%)'
             }}
           />
           
@@ -119,7 +119,7 @@ export default function Convenios() {
                 return (
                   <div 
                     key={convenio.id} 
-                    className={`flip-card h-64 cursor-pointer ${isFirstCard ? 'animate-hint-click' : ''}`}
+                    className="flip-card h-64 cursor-pointer"
                     style={{ perspective: '1000px' }}
                     onClick={() => handleCardFlip(convenio.id)}
                   >
@@ -135,10 +135,19 @@ export default function Convenios() {
                       {/* Frente de la card */}
                       <div 
                         className="flip-card-front absolute inset-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col items-center justify-center text-center relative"
-                        style={{ backfaceVisibility: 'hidden' }}
+                        style={{ 
+                          backfaceVisibility: 'hidden',
+                          backgroundColor: 'rgba(15, 52, 57, 0.3)'
+                        }}
                       >
                         {/* Categoría en esquina superior derecha */}
-                        <div className="absolute top-3 right-3 text-xs opacity-90 px-2 py-1 rounded-full bg-primary-green/20 text-primary-green font-medium">
+                        <div 
+                          className="absolute top-3 right-3 text-xs opacity-90 px-2 py-1 rounded-full font-medium"
+                          style={{
+                            backgroundColor: 'rgba(248, 240, 192, 0.3)',
+                            color: '#0F3439'
+                          }}
+                        >
                           {convenio.categoria}
                         </div>
                         
@@ -161,7 +170,8 @@ export default function Convenios() {
                         className="flip-card-back absolute inset-0 w-full h-full bg-primary-green/20 backdrop-blur-sm rounded-lg p-6 border border-primary-green/30 flex flex-col items-center justify-center text-center"
                         style={{ 
                           backfaceVisibility: 'hidden',
-                          transform: 'rotateY(180deg)'
+                          transform: 'rotateY(180deg)',
+                          backgroundColor: 'rgba(15, 52, 57, 0.3)'
                         }}
                       >
                         <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: 'Kanit, sans-serif' }}>

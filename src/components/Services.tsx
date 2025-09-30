@@ -6,7 +6,7 @@ export default function Services() {
       {/* Fondo de damero con colores verdes */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div 
-          className="w-full h-full animate-checkerboard"
+          className="w-full h-full"
           style={{
             backgroundImage: `
               linear-gradient(45deg, #21A85B 25%, transparent 25%),

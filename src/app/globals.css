@@ -99,17 +99,25 @@ body {
 
 /* Animación sutil para sugerir interacción en la primera card */
 .animate-hint-click {
-  animation: hint-click 3s ease-in-out infinite;
+  animation: hint-flip 4s ease-in-out infinite;
 }
 
-@keyframes hint-click {
-  0%, 100% {
-    transform: scale(1);
+@keyframes hint-flip {
+  0%, 85% {
+    transform: rotateY(0deg) scale(1);
     opacity: 1;
   }
-  50% {
-    transform: scale(1.02);
-    opacity: 0.9;
+  90% {
+    transform: rotateY(15deg) scale(1.02);
+    opacity: 0.95;
+  }
+  95% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
   }
 }
 
@@ -165,6 +173,39 @@ body {
     text-shadow: 0 4px 8px rgba(33, 168, 91, 0.5);
     transform: scale(1.02);
   }
+}
+
+/* Estilos de selección de texto personalizados */
+::selection {
+  background-color: #F8F0C0; /* primary-gold */
+  color: #0F3439; /* primary-dark */
+}
+
+::-moz-selection {
+  background-color: #F8F0C0; /* primary-gold */
+  color: #0F3439; /* primary-dark */
+}
+
+/* Para WebKit (Chrome, Safari, Edge) */
+::-webkit-selection {
+  background-color: #F8F0C0; /* primary-gold */
+  color: #0F3439; /* primary-dark */
+}
+
+/* Asegurar que funcione en todos los elementos */
+*::selection {
+  background-color: #F8F0C0 !important;
+  color: #0F3439 !important;
+}
+
+*::-moz-selection {
+  background-color: #F8F0C0 !important;
+  color: #0F3439 !important;
+}
+
+*::-webkit-selection {
+  background-color: #F8F0C0 !important;
+  color: #0F3439 !important;
 }
 
 
