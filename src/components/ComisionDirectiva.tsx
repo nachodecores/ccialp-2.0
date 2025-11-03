@@ -93,9 +93,9 @@ export default function ComisionDirectiva() {
         </div>
         
         {/* Formato Lista */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:gap-8">
           {/* Cargos Ejecutivos */}
-          <div className="mb-12">
+          <div className="flex-1 mb-12 md:mb-0">
             <h3 
               className="text-2xl font-bold mb-6"
               style={{ 
@@ -112,48 +112,38 @@ export default function ComisionDirectiva() {
                   key={miembro.id}
                   className="flex items-center py-4 px-6 bg-gradient-to-r from-primary-green/5 to-transparent border-l-4 border-primary-green hover:from-primary-green/10 transition-colors duration-200"
                 >
-                  {/* Avatar pequeño */}
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style={{ backgroundColor: '#21A85B' }}>
-                    <span className="text-sm text-white font-bold">
-                      {miembro.nombre.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  
                   {/* Información */}
                   <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                      <div>
-                        <h4 
-                          className="text-lg font-semibold"
-                          style={{ 
-                            fontFamily: 'Kanit, sans-serif',
-                            fontWeight: '600',
-                            color: '#0F3439'
-                          }}
-                        >
-                          {miembro.nombre}
-                        </h4>
-                        <p 
-                          className="text-sm"
-                          style={{ 
-                            fontFamily: 'Inter, sans-serif',
-                            fontWeight: '400',
-                            color: '#6B6B6B'
-                          }}
-                        >
-                          {miembro.empresa}
-                        </p>
-                      </div>
-                      <div 
-                        className="text-sm font-semibold px-3 py-1 rounded-full mt-2 md:mt-0 inline-block"
+                    <div>
+                      <h4 
+                        className="text-lg font-semibold"
                         style={{ 
-                          backgroundColor: '#21A85B',
-                          color: '#ffffff',
-                          fontFamily: 'Inter, sans-serif'
+                          fontFamily: 'Kanit, sans-serif',
+                          fontWeight: '600',
+                          color: '#0F3439'
+                        }}
+                      >
+                        {miembro.nombre}
+                      </h4>
+                      <p 
+                        className="text-sm"
+                        style={{ 
+                          fontFamily: 'Inter, sans-serif',
+                          fontWeight: '400',
+                          color: '#6B6B6B'
+                        }}
+                      >
+                        {miembro.empresa}
+                      </p>
+                      <p 
+                        className="text-sm font-semibold mt-2"
+                        style={{ 
+                          fontFamily: 'Inter, sans-serif',
+                          color: '#21A85B'
                         }}
                       >
                         {miembro.cargo}
-                      </div>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +152,7 @@ export default function ComisionDirectiva() {
           </div>
 
           {/* Vocales */}
-          <div>
+          <div className="flex-1">
             <h3 
               className="text-2xl font-bold mb-6"
               style={{ 
@@ -177,50 +167,31 @@ export default function ComisionDirectiva() {
               {comision.filter(miembro => !miembro.esEjecutivo).map((miembro, index) => (
                 <div 
                   key={miembro.id}
-                  className="flex items-center py-3 px-6 bg-gray-50 hover:bg-gray-100 transition-colors duration-200 border-l-4 border-gray-300"
+                  className="flex items-center py-6 px-10 bg-gray-50 hover:bg-gray-100 transition-colors duration-200 border-l-4 border-gray-300"
                 >
-                  {/* Avatar pequeño */}
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style={{ backgroundColor: '#6B6B6B' }}>
-                    <span className="text-xs text-white font-bold">
-                      {miembro.nombre.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  
                   {/* Información */}
                   <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                      <div>
-                        <h4 
-                          className="text-base font-semibold"
-                          style={{ 
-                            fontFamily: 'Kanit, sans-serif',
-                            fontWeight: '600',
-                            color: '#0F3439'
-                          }}
-                        >
-                          {miembro.nombre}
-                        </h4>
-                        <p 
-                          className="text-sm"
-                          style={{ 
-                            fontFamily: 'Inter, sans-serif',
-                            fontWeight: '400',
-                            color: '#6B6B6B'
-                          }}
-                        >
-                          {miembro.empresa}
-                        </p>
-                      </div>
-                      <div 
-                        className="text-xs font-semibold px-2 py-1 rounded-full mt-2 md:mt-0 inline-block"
+                    <div>
+                      <h4 
+                        className="text-base font-semibold"
                         style={{ 
-                          backgroundColor: '#6B6B6B',
-                          color: '#ffffff',
-                          fontFamily: 'Inter, sans-serif'
+                          fontFamily: 'Kanit, sans-serif',
+                          fontWeight: '600',
+                          color: '#0F3439'
                         }}
                       >
-                        {miembro.cargo}
-                      </div>
+                        {miembro.nombre}
+                      </h4>
+                      <p 
+                        className="text-sm"
+                        style={{ 
+                          fontFamily: 'Inter, sans-serif',
+                          fontWeight: '400',
+                          color: '#6B6B6B'
+                        }}
+                      >
+                        {miembro.empresa}
+                      </p>
                     </div>
                   </div>
                 </div>

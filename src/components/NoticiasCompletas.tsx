@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 import noticiasData from '@/data/noticias.json';
 
 interface Noticia {
@@ -16,18 +15,8 @@ interface Noticia {
 }
 
 export default function NoticiasCompletas() {
-  const [categoriaFiltro, setCategoriaFiltro] = useState<string>('todas');
-  
   // Cargar datos desde JSON
   const noticias: Noticia[] = noticiasData as Noticia[];
-  
-  // Obtener categorías únicas
-  const categorias = ['todas', ...Array.from(new Set(noticias.map(n => n.categoria)))];
-  
-  // Filtrar noticias
-  const noticiasFiltradas = categoriaFiltro === 'todas' 
-    ? noticias 
-    : noticias.filter(n => n.categoria === categoriaFiltro);
 
   const getCardClasses = (tipo: string) => {
     switch (tipo) {
@@ -43,8 +32,8 @@ export default function NoticiasCompletas() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* Título y descripción */}
+    <div className="max-w-7xl mx-auto mt-8">
+      {/* Título */}
       <div className="text-center mb-12">
         <h1 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
@@ -56,48 +45,14 @@ export default function NoticiasCompletas() {
         >
           Noticias
         </h1>
-        
-        <p 
-          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-          style={{ 
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: '400',
-            lineHeight: '1.6'
-          }}
-        >
-          Mantenete informado sobre las últimas novedades del Centro Comercial, Industrial y Agrario de Las Piedras
-        </p>
-      </div>
-
-      {/* Filtros por categoría */}
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
-        {categorias.map((categoria) => (
-          <button
-            key={categoria}
-            onClick={() => setCategoriaFiltro(categoria)}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              categoriaFiltro === categoria
-                ? 'bg-primary-green text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-            style={{ 
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: '600',
-              backgroundColor: categoriaFiltro === categoria ? '#21A85B' : undefined,
-              color: categoriaFiltro === categoria ? '#ffffff' : undefined
-            }}
-          >
-            {categoria === 'todas' ? 'Todas' : categoria.toUpperCase()}
-          </button>
-        ))}
       </div>
 
       {/* Grid de noticias */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        {noticiasFiltradas.map((noticia) => (
+        {noticias.map((noticia) => (
           <div
             key={noticia.id}
-            className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 ${getCardClasses(noticia.tipo)}`}
+            className={`bg-white rounded-xl shadow-lg overflow-hidden ${getCardClasses(noticia.tipo)}`}
           >
             {noticia.imagen && (
               <div className="aspect-video bg-gray-200 overflow-hidden">
@@ -157,38 +112,11 @@ export default function NoticiasCompletas() {
               >
                 {noticia.descripcion}
               </p>
-
-              {/* Información del autor */}
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <p 
-                  className="text-xs text-gray-500"
-                  style={{ 
-                    fontFamily: 'Inter, sans-serif',
-                    fontWeight: '400'
-                  }}
-                >
-                  Por {noticia.autor}
-                </p>
-              </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Mensaje si no hay noticias */}
-      {noticiasFiltradas.length === 0 && (
-        <div className="text-center py-12">
-          <p 
-            className="text-lg text-gray-500"
-            style={{ 
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: '400'
-            }}
-          >
-            No hay noticias disponibles en esta categoría.
-          </p>
-        </div>
-      )}
 
       {/* Botón para volver al inicio */}
       <div className="text-center">

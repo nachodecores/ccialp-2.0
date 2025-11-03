@@ -5,64 +5,20 @@ export default function PlanesSuscripcion() {
       nombre: 'Socio',
       precio: '$400',
       periodo: 'mensual',
-      descripcion: 'Ideal para pequeñas empresas que buscan beneficios esenciales',
+      descripcion: 'Ideal para empresas que buscan beneficios esenciales y representatividad gremial',
       beneficios: [
+        'Representación gremial empresarial',
         'Acceso a convenios comerciales',
-        'Participación en eventos mensuales',
-        'Boletín informativo',
-        'Descuentos en capacitaciones básicas',
-        'Soporte por email'
+        'Tarifas especiales en el uso de las instalaciones'
       ],
       destacado: false
-    },
-    {
-      id: 'premium',
-      nombre: 'Socio Plus',
-      precio: '$1.100',
-      periodo: 'mensual',
-      descripcion: 'Para empresas en crecimiento que buscan maximizar oportunidades',
-      beneficios: [
-        'Todos los beneficios del Plan Básico',
-        'Acceso a convenios exclusivos',
-        'Participación en eventos premium',
-        'Consultoría empresarial (2 horas/mes)',
-        'Descuentos en capacitaciones avanzadas',
-        'Soporte prioritario telefónico',
-        'Acceso a base de datos de contactos',
-        'Participación en comisiones directivas'
-      ],
-      destacado: true
     }
   ];
 
   return (
-    <div className="max-w-6xl mx-auto mb-16">
-      {/* Título de la sección */}
-      <div className="text-center mb-12">
-        <h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-          style={{ 
-            fontFamily: 'Kanit, sans-serif',
-            fontWeight: '600',
-            color: '#0F3439'
-          }}
-        >
-          Elegí tu Plan
-        </h2>
-        <p 
-          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-          style={{ 
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: '400',
-            lineHeight: '1.6'
-          }}
-        >
-          Seleccioná el plan que mejor se adapte a las necesidades de tu empresa
-        </p>
-      </div>
-
+    <div className="w-full mb-16 bg-primary-dark">
       {/* Grid de planes */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-primary-dark p-8 rounded-2xl">
         {planes.map((plan) => (
           <div
             key={plan.id}
@@ -178,20 +134,32 @@ export default function PlanesSuscripcion() {
             </div>
           </div>
         ))}
-      </div>
 
-      {/* Texto informativo adicional */}
-      <div className="text-center mt-12">
-        <p 
-          className="text-lg text-gray-500 max-w-2xl mx-auto"
-          style={{ 
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: '400',
-            lineHeight: '1.6'
-          }}
-        >
-          Por servicios de gestoría consultar aquí, ya que los precios varían en función de las características de la empresa.
-        </p>
+        {/* Tarjeta de servicios de gestoría */}
+        <div className="relative bg-primary-gold rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-105">
+          <div className="flex flex-col h-full justify-center">
+            <p 
+              className="text-xl md:text-2xl text-gray-700 text-center"
+              style={{ 
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: '400',
+                lineHeight: '1.6'
+              }}
+            >
+              Por servicios de gestoría y apertura de empresas{' '}
+              <a
+                href="https://wa.me/59899320115?text=Buenas,%20tengo%20una%20consulta%20para%20hacerles"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold underline hover:opacity-80 transition-opacity"
+                style={{ color: '#0F3439' }}
+              >
+                consultar aquí
+              </a>
+              , ya que los precios varían en función de las características de la empresa.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
