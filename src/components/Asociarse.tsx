@@ -29,7 +29,7 @@ export default function Asociarse() {
             className="inline-block text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-300 hover:scale-110 animate-pulse-glow"
             style={{ 
               fontFamily: 'Comfortaa, sans-serif',
-              fontWeight: '700',
+              fontWeight: '900',
               color: '#21A85B',
               textShadow: '0 2px 4px rgba(33, 168, 91, 0.3)'
             }}

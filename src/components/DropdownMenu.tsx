@@ -10,7 +10,7 @@ export default function DropdownMenu() {
     { name: 'NOSOTROS', href: '/nosotros' },
     { name: 'SERVICIOS', href: '#services' },
     { name: 'CONVENIOS', href: '/convenios' },
-    { name: 'NOTICIAS', href: '/noticias' },
+    // { name: 'NOTICIAS', href: '/noticias' },
     { name: 'ASOCIARSE', href: '/asociarse' },
     { name: 'CONTACTO', href: '#contacto' },
   ];

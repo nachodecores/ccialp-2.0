@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import Convenios from "@/components/Convenios";
 import Asociarse from "@/components/Asociarse";
 import CentrosPyme from "@/components/CentrosPyme";
-import Noticias from "@/components/Noticias";
+// import Noticias from "@/components/Noticias";
 import Confederaciones from "@/components/Confederaciones";
 import Footer from "@/components/Footer";
 
@@ -20,7 +20,7 @@ export default function Home() {
       <CentrosPyme />
       <Convenios />
       <Asociarse />
-      <Noticias />
+      {/* <Noticias /> */}
       <Confederaciones />
       <Footer />
     </div>
