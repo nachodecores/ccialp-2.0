@@ -1,9 +1,28 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
-import conveniosData from '@/data/convenios.json';
+import { useState, useEffect } from "react";
+import { Convenio } from '@/types/convenios';
 
 export default function Convenios() {
-  const convenios = conveniosData.filter(convenio => convenio.activo);
+  const [convenios, setConvenios] = useState<Convenio[]>([]);
+
+  useEffect(() => {
+    cargarConvenios();
+  }, []);
+
+  const cargarConvenios = async () => {
+    try {
+      const response = await fetch('/api/convenios?activo=true');
+      const data = await response.json();
+      if (response.ok) {
+        setConvenios(data.data || []);
+      }
+    } catch (error) {
+      console.error('Error al cargar convenios:', error);
+    }
+  };
   return (
     <section className="w-full py-16 px-4 md:px-8 lg:px-16" style={{ backgroundColor: '#0F3439' }}>
       <div className="max-w-6xl mx-auto">
@@ -39,14 +58,13 @@ export default function Convenios() {
           ></div>
           
           <div className="flex animate-scroll space-x-8 md:space-x-16">
-            {/* Primera fila de logos */}
-            {convenios.map((convenio) => (
+            {convenios.filter(c => c.logo).map((convenio) => (
               <div 
                 key={`first-${convenio.id}`} 
                 className="flex-shrink-0 flex items-center justify-center"
               >
                 <Image
-                  src={convenio.logo}
+                  src={convenio.logo!}
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}
@@ -55,14 +73,13 @@ export default function Convenios() {
                 />
               </div>
             ))}
-            {/* Segunda fila de logos para el loop infinito */}
-            {convenios.map((convenio) => (
+            {convenios.filter(c => c.logo).map((convenio) => (
               <div 
                 key={`second-${convenio.id}`} 
                 className="flex-shrink-0 flex items-center justify-center"
               >
                 <Image
-                  src={convenio.logo}
+                  src={convenio.logo!}
                   alt={`Logo de ${convenio.nombre}`}
                   width={240}
                   height={120}

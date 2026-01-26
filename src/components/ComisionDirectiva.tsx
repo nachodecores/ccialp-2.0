@@ -107,7 +107,7 @@ export default function ComisionDirectiva() {
               Cargos Ejecutivos
             </h3>
             <div className="space-y-4">
-              {comision.filter(miembro => miembro.esEjecutivo).map((miembro, index) => (
+              {comision.filter(miembro => miembro.esEjecutivo).map((miembro) => (
                 <div 
                   key={miembro.id}
                   className="flex items-center py-4 px-6 bg-gradient-to-r from-primary-green/5 to-transparent border-l-4 border-primary-green hover:from-primary-green/10 transition-colors duration-200"
@@ -164,7 +164,7 @@ export default function ComisionDirectiva() {
               Vocales
             </h3>
             <div className="space-y-3">
-              {comision.filter(miembro => !miembro.esEjecutivo).map((miembro, index) => (
+              {comision.filter(miembro => !miembro.esEjecutivo).map((miembro) => (
                 <div 
                   key={miembro.id}
                   className="flex items-center py-6 px-10 bg-gray-50 hover:bg-gray-100 transition-colors duration-200 border-l-4 border-gray-300"

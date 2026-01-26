@@ -1,16 +1,52 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
-import conveniosData from '@/data/convenios.json';
+import { useState, useEffect } from "react";
+import { Convenio } from '@/types/convenios';
 import HeaderPaginas from '@/components/HeaderPaginas';
 import Footer from '@/components/Footer';
 
 export default function Convenios() {
-  const convenios = conveniosData.filter(convenio => convenio.activo);
-  const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
+  const [convenios, setConvenios] = useState<Convenio[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
 
-  const handleCardFlip = (cardId: number) => {
+  useEffect(() => {
+    cargarConvenios();
+  }, []);
+
+  const cargarConvenios = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await fetch('/api/convenios?activo=true');
+      const data = await response.json();
+      
+      console.log('Response status:', response.status);
+      console.log('Response data:', data);
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Error al cargar los convenios');
+      }
+      
+      if (data.data) {
+        setConvenios(data.data);
+        console.log('Convenios cargados:', data.data.length);
+      } else {
+        setConvenios([]);
+        console.warn('No se recibieron datos en la respuesta');
+      }
+    } catch (error) {
+      console.error('Error al cargar convenios:', error);
+      setError(error instanceof Error ? error.message : 'Error desconocido');
+      setConvenios([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCardFlip = (cardId: string) => {
     setFlippedCards(prev => {
       const newSet = new Set(prev);
       if (newSet.has(cardId)) {
@@ -111,85 +147,118 @@ export default function Convenios() {
               
             </div>
 
-            {/* Grid de convenios */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {convenios.map((convenio, index) => {
-                const isFlipped = flippedCards.has(convenio.id);
-                const isFirstCard = index === 0;
-                return (
-                  <div 
-                    key={convenio.id} 
-                    className="flip-card h-64 cursor-pointer"
-                    style={{ perspective: '1000px' }}
-                    onClick={() => handleCardFlip(convenio.id)}
-                  >
+            {loading ? (
+              <div className="text-center py-12">
+                <p style={{ fontFamily: 'Inter, sans-serif' }}>Cargando convenios...</p>
+              </div>
+            ) : error ? (
+              <div className="text-center py-12">
+                <p style={{ fontFamily: 'Inter, sans-serif', color: '#ff6b6b' }}>
+                  Error: {error}
+                </p>
+                <button
+                  onClick={cargarConvenios}
+                  className="mt-4 px-4 py-2 bg-primary-green text-white rounded-lg hover:bg-green-600"
+                  style={{ fontFamily: 'Inter, sans-serif' }}
+                >
+                  Reintentar
+                </button>
+              </div>
+            ) : convenios.length === 0 ? (
+              <div className="text-center py-12">
+                <p style={{ fontFamily: 'Inter, sans-serif' }}>
+                  No se encontraron convenios activos.
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                {convenios.map((convenio) => {
+                  const isFlipped = flippedCards.has(convenio.id);
+                  return (
                     <div 
-                      className={`flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
-                        isFlipped ? 'rotate-y-180' : ''
-                      }`}
-                      style={{ 
-                        transformStyle: 'preserve-3d',
-                        transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-                      }}
+                      key={convenio.id} 
+                      className="flip-card h-64 cursor-pointer"
+                      style={{ perspective: '1000px' }}
+                      onClick={() => handleCardFlip(convenio.id)}
                     >
-                      {/* Frente de la card */}
                       <div 
-                        className="flip-card-front absolute inset-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col items-center justify-center text-center relative"
+                        className={`flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
+                          isFlipped ? 'rotate-y-180' : ''
+                        }`}
                         style={{ 
-                          backfaceVisibility: 'hidden',
-                          backgroundColor: 'rgba(15, 52, 57, 0.3)'
+                          transformStyle: 'preserve-3d',
+                          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
                         }}
                       >
-                        {/* Categoría en esquina superior derecha */}
                         <div 
-                          className="absolute top-3 right-3 text-xs opacity-90 px-2 py-1 rounded-full font-medium"
-                          style={{
-                            backgroundColor: 'rgba(248, 240, 192, 0.3)',
-                            color: '#0F3439'
+                          className="flip-card-front absolute inset-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col items-center justify-center text-center relative"
+                          style={{ 
+                            backfaceVisibility: 'hidden',
+                            backgroundColor: 'rgba(15, 52, 57, 0.3)'
                           }}
                         >
-                          {convenio.categoria}
+                          <div 
+                            className="absolute top-3 right-3 text-xs opacity-90 px-2 py-1 rounded-full font-medium"
+                            style={{
+                              backgroundColor: 'rgba(248, 240, 192, 0.3)',
+                              color: '#0F3439'
+                            }}
+                          >
+                            {convenio.categoria || 'Sin categoría'}
+                          </div>
+                          
+                          <div className="w-32 h-32 mx-auto my-6 bg-white rounded-lg flex items-center justify-center p-2">
+                            {convenio.logo ? (
+                              <Image
+                                src={convenio.logo}
+                                alt={`Logo de ${convenio.nombre}`}
+                                width={80}
+                                height={80}
+                                className="w-full h-full object-contain"
+                              />
+                            ) : (
+                              <span className="text-gray-400 text-xs">Sin logo</span>
+                            )}
+                          </div>
+                          <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif' }}>
+                            {convenio.nombre}
+                          </h3>
                         </div>
-                        
-                        <div className="w-32 h-32 mx-auto my-6 bg-white rounded-lg flex items-center justify-center p-2">
-                          <Image
-                            src={convenio.logo}
-                            alt={`Logo de ${convenio.nombre}`}
-                            width={80}
-                            height={80}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif' }}>
-                          {convenio.nombre}
-                        </h3>
-                      </div>
 
-                      {/* Reverso de la card */}
-                      <div 
-                        className="flip-card-back absolute inset-0 w-full h-full bg-primary-green/20 backdrop-blur-sm rounded-lg p-6 border border-primary-green/30 flex flex-col items-center justify-center text-center"
-                        style={{ 
-                          backfaceVisibility: 'hidden',
-                          transform: 'rotateY(180deg)',
-                          backgroundColor: 'rgba(15, 52, 57, 0.3)'
-                        }}
-                      >
-                        <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: 'Kanit, sans-serif' }}>
-                          {convenio.nombre}
-                        </h3>
-                        <div className="text-sm font-bold text-primary-green mb-2">
-                          {convenio.descuento}
+                        <div 
+                          className="flip-card-back absolute inset-0 w-full h-full bg-primary-green/20 backdrop-blur-sm rounded-lg p-6 border border-primary-green/30 flex flex-col items-center justify-center text-center overflow-y-auto"
+                          style={{ 
+                            backfaceVisibility: 'hidden',
+                            transform: 'rotateY(180deg)',
+                            backgroundColor: 'rgba(15, 52, 57, 0.3)'
+                          }}
+                        >
+                          <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: 'Kanit, sans-serif' }}>
+                            {convenio.nombre}
+                          </h3>
+                          
+                          {convenio.beneficios && convenio.beneficios.length > 0 && (
+                            <div className="text-xs opacity-90 mb-2 text-left w-full">
+                              <ul className="list-disc list-inside space-y-1">
+                                {convenio.beneficios.map((beneficio, idx) => (
+                                  <li key={idx}>{beneficio}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          
+                          {convenio.alcance && (
+                            <div className="text-xs opacity-75 mt-2 italic">
+                              Beneficio para: {convenio.alcance}
+                            </div>
+                          )}
                         </div>
-                        <div className="text-xs opacity-90 mb-2">
-                          {convenio.descripcion}
-                        </div>
-                      
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            )}
 
             
           </div>

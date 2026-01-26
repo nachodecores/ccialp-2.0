@@ -21,7 +21,7 @@ export default function Footer() {
             <h3 
               className="text-2xl font-normal text-white/80 font-kanit"
             >
-              "Algunos ven al empresario como el lobo al que hay que abatir, otros lo ven como la vaca que hay que ordeñar, pero muy pocos lo ven como el caballo que tira del carro"
+              &quot;Algunos ven al empresario como el lobo al que hay que abatir, otros lo ven como la vaca que hay que ordeñar, pero muy pocos lo ven como el caballo que tira del carro&quot;
             </h3>
           </div>
           
@@ -191,11 +191,20 @@ export default function Footer() {
         
         {/* Línea divisoria y copyright */}
         <div className="mt-8 pt-6 border-t border-white/20">
-          <p 
-            className="text-center text-xs text-white font-inter font-normal"
-          >
-            © 2025 Centro Comercial, Industrial y Agrario de Las Piedras. Todos los derechos reservados.
-          </p>
+          <div className="flex items-center justify-center gap-2 flex-wrap">
+            <p 
+              className="text-center text-xs text-white font-inter font-normal"
+            >
+              © 2025 Centro Comercial, Industrial y Agrario de Las Piedras. Todos los derechos reservados.
+            </p>
+            <span className="text-xs text-white/60">|</span>
+            <Link 
+              href="/admin"
+              className="text-xs text-white/80 hover:text-white transition-colors duration-300 font-inter font-normal"
+            >
+              Admin
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

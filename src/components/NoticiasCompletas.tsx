@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import noticiasData from '@/data/noticias.json';
 
 interface Noticia {
@@ -120,7 +121,7 @@ export default function NoticiasCompletas() {
 
       {/* Botón para volver al inicio */}
       <div className="text-center">
-        <a
+        <Link
           href="/"
           className="inline-flex items-center px-6 py-3 text-base font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
           style={{ 
@@ -138,7 +139,7 @@ export default function NoticiasCompletas() {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   );

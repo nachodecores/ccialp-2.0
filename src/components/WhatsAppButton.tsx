@@ -1,6 +1,15 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 export default function WhatsAppButton() {
+  const pathname = usePathname();
+  
+  // No mostrar el botón en páginas de admin
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <div 
       className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50"

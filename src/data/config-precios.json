@@ -1,0 +1,56 @@
+{
+  "preciosBasePorRegimen": {
+    "monotributo": {
+      "precioBase": 2600
+    },
+    "literalE": {
+      "precioBase": 3200
+    },
+    "regimenIVAGeneral": {
+      "precioBase": 4500
+    },
+    "rural": {
+      "precioBase": 2000
+    },
+    "asociacionCivilSinFinesLucro": {
+      "precioBase": 4500
+    },
+    "trabajoDomestico": {
+      "precioBase": 1600
+    }
+  },
+  "ajustesPorNaturalezaJuridica": {
+    "unipersonal": {
+      "factor": 1
+    },
+    "sociedadHecho": {
+      "factor": 1
+    },
+    "srl": {
+      "factor": 1.5
+    },
+    "sas": {
+      "factor": 2
+    },
+    "sa": {
+      "factor": 2
+    }
+  },
+  "multiplicadoresVolumen": {
+    "0-20": 1,
+    "21-50": 1.05,
+    "51-100": 1.1,
+    "100+": 1.15
+  },
+  "recargosEspeciales": {
+    "declaracionesMensuales": 3000,
+    "declaracionesAnuales": 300
+  },
+  "costosEmpleados": {
+    "primerEmpleado": 800,
+    "segundoEmpleado": 500,
+    "factorDescuento": 0.9,
+    "costoMinimo": 250
+  },
+  "cuotaGremial": 400
+}
