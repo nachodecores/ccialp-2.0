@@ -323,9 +323,14 @@ export default function SocioDetalle() {
             />
             <CampoEditable
               label="Al Día Cuota"
-              value={editando ? formData.al_dia_cuota : socio.al_dia_cuota}
+              value={editando ? (formData.al_dia_cuota ? 'true' : 'false') : (socio.al_dia_cuota ? 'true' : 'false')}
               editando={editando}
-              onChange={(value) => setFormData({ ...formData, al_dia_cuota: value })}
+              tipo="select"
+              opciones={[
+                { value: 'false', label: 'No al día (Inactivo)' },
+                { value: 'true', label: 'Al día (Activo)' },
+              ]}
+              onChange={(value) => setFormData({ ...formData, al_dia_cuota: value === 'true' })}
             />
           </div>
         </div>
