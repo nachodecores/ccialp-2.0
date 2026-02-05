@@ -144,7 +144,7 @@ export default function Footer() {
                   />
                 </Link>
                 
-                {/* LinkedIn */}
+                {/* LinkedIn, X y YouTube ocultos por ahora
                 <Link 
                   href="https://www.linkedin.com/in/centro-comercial-industrial-y-agrario-de-las-piedras-b9941776/"
                   target="_blank"
@@ -158,7 +158,6 @@ export default function Footer() {
                   />
                 </Link>
                 
-                {/* Twitter/X */}
                 <Link 
                   href="https://x.com/CCIALasPiedras"
                   target="_blank"
@@ -172,7 +171,6 @@ export default function Footer() {
                   />
                 </Link>
                 
-                {/* YouTube */}
                 <Link 
                   href="https://www.youtube.com/@centrocomercial5753"
                   target="_blank"
@@ -185,6 +183,7 @@ export default function Footer() {
                     className="w-8 h-8"
                   />
                 </Link>
+                */}
             </div>
           </div>
         </div>
