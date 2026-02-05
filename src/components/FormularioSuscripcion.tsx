@@ -125,46 +125,40 @@ export default function FormularioSuscripcion() {
       <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
         <form className="space-y-6" onSubmit={handleSubmit}>
           
-          {/* Selección de tipo de asociación */}
-          {!tipoAsociacion && (
-            <div className="mb-6">
-              <label className="block text-lg font-semibold text-gray-700 mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-                ¿Qué tipo de asociación te interesa? *
-              </label>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button
-                  type="button"
-                  onClick={() => setTipoAsociacion('gremial')}
-                  className="p-6 border-2 border-gray-300 rounded-xl hover:border-primary-green hover:bg-green-50 transition-all text-left"
-                >
-                  <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif', color: '#0F3439' }}>
-                    Socio Gremial
-                  </h3>
-                  <p className="text-gray-600 mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Representación gremial y acceso a convenios
-                  </p>
-                  <p className="text-2xl font-bold" style={{ color: '#21A85B', fontFamily: 'Kanit, sans-serif' }}>
-                    $400/mes
-                  </p>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setTipoAsociacion('gestoria')}
-                  className="p-6 border-2 border-gray-300 rounded-xl hover:border-primary-green hover:bg-green-50 transition-all text-left"
-                >
-                  <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif', color: '#0F3439' }}>
-                    Con Gestoría
-                  </h3>
-                  <p className="text-gray-600 mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Gestoría completa + beneficios gremiales
-                  </p>
-                  <p className="text-sm text-gray-500" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Cuota según características de tu empresa
-                  </p>
-                </button>
+          {/* Cards de tipo de asociación (sin link; formularios a desarrollar más adelante) */}
+          <div className="mb-6">
+            <label className="block text-lg font-semibold text-gray-700 mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
+              ¿Qué tipo de asociación te interesa?
+            </label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div
+                className="p-6 border-2 border-gray-300 rounded-xl text-left bg-gray-50/50 cursor-default"
+              >
+                <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif', color: '#0F3439' }}>
+                  Socio Gremial
+                </h3>
+                <p className="text-gray-600 mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Representación gremial y acceso a convenios
+                </p>
+                <p className="text-2xl font-bold" style={{ color: '#21A85B', fontFamily: 'Kanit, sans-serif' }}>
+                  $400/mes
+                </p>
+              </div>
+              <div
+                className="p-6 border-2 border-gray-300 rounded-xl text-left bg-gray-50/50 cursor-default"
+              >
+                <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Kanit, sans-serif', color: '#0F3439' }}>
+                  Con Gestoría
+                </h3>
+                <p className="text-gray-600 mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Gestoría completa + beneficios gremiales
+                </p>
+                <p className="text-sm text-gray-500" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Cuota según características de tu empresa
+                </p>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Botón para volver atrás */}
           {tipoAsociacion && (
