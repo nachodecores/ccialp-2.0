@@ -176,7 +176,7 @@ export default function SocioDetalle() {
                 { value: 'gremial', label: 'Gremial' },
                 { value: 'gestoria', label: 'Con Gestoría' },
               ]}
-              onChange={(value) => setFormData({ ...formData, tipo_socio: value || null })}
+              onChange={(value) => setFormData({ ...formData, tipo_socio: (value === 'gremial' || value === 'gestoria') ? value : null })}
             />
             <CampoEditable
               label="Email"

@@ -8,9 +8,7 @@ const nextConfig: NextConfig = {
     // Evita que el build falle por warnings/errores de ESLint hasta que el código desplegado incluya las correcciones
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@supabase/supabase-js'],
-  },
+  serverExternalPackages: ['@supabase/supabase-js'],
 };
 
 export default nextConfig;
