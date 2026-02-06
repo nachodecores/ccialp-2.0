@@ -4,7 +4,7 @@ let cached: SupabaseClient | null = null;
 
 /**
  * Cliente Supabase con service role (solo servidor).
- * Usa dynamic import para evitar "Cannot use import statement outside a module" en Vercel.
+ * Usa require() para cargar la build CommonJS y evitar "Cannot use import statement outside a module" en Vercel.
  */
 export async function getSupabaseAdmin(): Promise<SupabaseClient> {
   if (cached) return cached;
@@ -19,7 +19,8 @@ export async function getSupabaseAdmin(): Promise<SupabaseClient> {
     throw new Error(`Missing Supabase admin environment variables: ${missing.join(', ')}`);
   }
 
-  const { createClient } = await import('@supabase/supabase-js');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { createClient } = require('@supabase/supabase-js');
   cached = createClient(supabaseUrl, supabaseServiceRoleKey, {
     auth: {
       autoRefreshToken: false,
