@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase-admin';
+import { getSupabaseAdmin } from '@/lib/supabase-admin';
 
 export async function GET(request: NextRequest) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const { searchParams } = new URL(request.url);
     const activo = searchParams.get('activo');
     const categoria = searchParams.get('categoria');
@@ -38,6 +39,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const body = await request.json();
 
     const { data, error } = await supabaseAdmin

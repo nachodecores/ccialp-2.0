@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase-admin';
+import { getSupabaseAdmin } from '@/lib/supabase-admin';
 import { Socio } from '@/types/socios';
 import { generarSlugUnico } from '@/lib/slug';
 
 // GET /api/socios - Listar todos los socios (con filtros opcionales)
 export async function GET(request: NextRequest) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const searchParams = request.nextUrl.searchParams;
     const estado = searchParams.get('estado'); // 'activo' | 'inactivo'
     const busqueda = searchParams.get('busqueda'); // Búsqueda por nombre, cédula, etc.
@@ -74,6 +75,7 @@ export async function GET(request: NextRequest) {
 // POST /api/socios - Crear nuevo socio
 export async function POST(request: NextRequest) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const body = await request.json();
 
     // Validar campos requeridos

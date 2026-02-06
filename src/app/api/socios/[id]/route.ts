@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabaseAdmin } from '@/lib/supabase-admin';
+import { getSupabaseAdmin } from '@/lib/supabase-admin';
 import { Socio } from '@/types/socios';
 
 // GET /api/socios/[id] - Obtener un socio específico
@@ -8,6 +8,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const { id } = await params;
 
     const { data, error } = await supabaseAdmin
@@ -46,6 +47,7 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const { id } = await params;
     const body = await request.json();
 
@@ -120,6 +122,7 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const supabaseAdmin = await getSupabaseAdmin();
     const { id } = await params;
 
     // Verificar que el socio existe
