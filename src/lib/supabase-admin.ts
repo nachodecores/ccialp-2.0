@@ -21,11 +21,12 @@ export async function getSupabaseAdmin(): Promise<SupabaseClient> {
 
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { createClient } = require('@supabase/supabase-js');
-  cached = createClient(supabaseUrl, supabaseServiceRoleKey, {
+  const client = createClient(supabaseUrl, supabaseServiceRoleKey, {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
     },
   });
-  return cached;
+  cached = client;
+  return client;
 }
