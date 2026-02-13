@@ -130,7 +130,7 @@ export default function FormularioSuscripcion() {
             <label className="block text-lg font-semibold text-gray-700 mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
               ¿Qué tipo de asociación te interesa?
             </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div
                 className="p-6 border-2 border-gray-300 rounded-xl text-left bg-gray-50/50 cursor-default"
               >
@@ -143,7 +143,7 @@ export default function FormularioSuscripcion() {
                 <p className="text-2xl font-bold" style={{ color: '#21A85B', fontFamily: 'Kanit, sans-serif' }}>
                   $400/mes
                 </p>
-              </div>
+            </div>
               <div
                 className="p-6 border-2 border-gray-300 rounded-xl text-left bg-gray-50/50 cursor-default"
               >
@@ -183,8 +183,8 @@ export default function FormularioSuscripcion() {
                 });
               }}
               className="text-sm text-gray-600 hover:text-gray-800 mb-4"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
               ← Cambiar tipo de asociación
             </button>
           )}
@@ -196,34 +196,34 @@ export default function FormularioSuscripcion() {
                 <p className="text-sm text-green-800" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <strong>Cuota fija:</strong> $400/mes
                 </p>
-              </div>
+            </div>
 
               {/* Pregunta: ¿Tiene empresa? */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
                   ¿Tiene empresa? *
-                </label>
-                <div className="flex space-x-6">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
+            </label>
+            <div className="flex space-x-6">
+              <label className="flex items-center">
+                <input
+                  type="radio"
                       checked={tieneEmpresa === false}
                       onChange={() => setTieneEmpresa(false)}
                       className="mr-2 text-primary-green"
                     />
                     <span style={{ fontFamily: 'Inter, sans-serif' }}>No</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
                       checked={tieneEmpresa === true}
                       onChange={() => setTieneEmpresa(true)}
                       className="mr-2 text-primary-green"
                     />
                     <span style={{ fontFamily: 'Inter, sans-serif' }}>Sí</span>
-                  </label>
-                </div>
-              </div>
+              </label>
+            </div>
+          </div>
 
               {/* Datos de la empresa (si tiene empresa) */}
               {tieneEmpresa === true && (
@@ -278,8 +278,8 @@ export default function FormularioSuscripcion() {
                         placeholder="Dirección completa"
                       />
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
                           Número RUT
                         </label>
@@ -294,9 +294,9 @@ export default function FormularioSuscripcion() {
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
                           Número BPS
-                        </label>
-                        <input
-                          type="text"
+                  </label>
+                  <input
+                    type="text"
                           value={datosEmpresa.bps}
                           onChange={(e) => setDatosEmpresa({ ...datosEmpresa, bps: e.target.value })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent"
@@ -315,12 +315,12 @@ export default function FormularioSuscripcion() {
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
+                <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
                       Nombre y apellido *
-                    </label>
-                    <input
-                      type="text"
+                  </label>
+                  <input
+                    type="text"
                       required
                       value={datosContacto.nombre}
                       onChange={(e) => setDatosContacto({ ...datosContacto, nombre: e.target.value })}
@@ -334,14 +334,14 @@ export default function FormularioSuscripcion() {
                     </label>
                     <input
                       type="tel"
-                      required
+                    required
                       value={datosContacto.telefono}
                       onChange={(e) => setDatosContacto({ ...datosContacto, telefono: e.target.value })}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent"
                       placeholder="099 123 456"
-                    />
-                  </div>
+                  />
                 </div>
+              </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Email *
@@ -731,23 +731,23 @@ export default function FormularioSuscripcion() {
           {/* Botón de envío */}
           {tipoAsociacion && (
             <div className="text-center pt-4">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
-                style={{ 
-                  fontFamily: 'Kanit, sans-serif',
-                  fontWeight: '600',
-                  backgroundColor: '#21A85B'
-                }}
-              >
-                ENVIAR SOLICITUD
-                <img 
-                  src="/assets/icons/icono-enviar.svg" 
-                  alt="Enviar" 
-                  className="ml-2 w-4 h-4" 
-                />
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              style={{ 
+                fontFamily: 'Kanit, sans-serif',
+                fontWeight: '600',
+                backgroundColor: '#21A85B'
+              }}
+            >
+              ENVIAR SOLICITUD
+              <img 
+                src="/assets/icons/icono-enviar.svg" 
+                alt="Enviar" 
+                className="ml-2 w-4 h-4" 
+              />
+            </button>
+          </div>
           )}
         </form>
       </div>

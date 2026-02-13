@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       }}
     >
       <a
-        href="https://wa.me/59899320115?text=Buenas,%20tengo%20una%20consulta%20para%20hacerles"
+        href="https://wa.me/59893948122?text=Buenas,%20tengo%20una%20consulta%20para%20hacerles"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg hover:scale-110 transition-all duration-300 ease-in-out no-underline"

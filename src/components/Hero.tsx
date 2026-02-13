@@ -8,13 +8,14 @@ export default function Hero() {
       style={{ minHeight: '100vh' }}
     >
       {/* Imagen de fondo */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <Image
-          src="/assets/images/topsphere-media-CDKAIH4Ud7c-unsplash.jpg"
-          alt="Fondo Hero"
+          src="/assets/images/aereo_las_piedras_hero_4k.jpg"
+          alt="Vista aérea de Las Piedras"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
+          sizes="100vw"
         />
         {/* Overlay para mejorar legibilidad */}
         <div 
